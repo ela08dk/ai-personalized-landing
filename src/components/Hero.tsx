@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
           <div className="relative h-[400px] flex items-center justify-center">
             <div className="absolute inset-0 bg-gradient-radial from-craftera-purple/20 to-transparent rounded-full blur-3xl"></div>
 
-            <div className="relative w-full max-w-md">
+            <div className="relative w-full">
               {/* Referring page analytics overlay */}
               <div className="absolute -top-12 -left-4 z-10 animate-float">
                 <div className="bg-white rounded-lg shadow-lg p-3 text-xs">
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
                 <CarouselContent>
                   {/* Original page */}
                   <CarouselItem>
-                    <div className="bg-white shadow-xl rounded-xl border border-gray-100 p-2 transform transition-all duration-500 hover:scale-105">
+                    <div className="bg-white rounded-xl border border-gray-100 p-2 transform transition-all duration-500 ">
                       <div className="overflow-hidden rounded-lg">
                         <div className="relative bg-gray-900 p-2 flex items-center">
                           <div className="flex items-center text-white text-xs">
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
                           </div>
                         </div>
                         <img
-                          src="/lovable-uploads/f03b2e75-ce1a-4235-99a5-0c5c4bb5b0a2.png"
+                          src="/before.png"
                           alt="Original Page"
                           className="w-full h-auto rounded-b-lg"
                         />
@@ -96,7 +96,7 @@ const Hero: React.FC = () => {
 
                   {/* AI personalized page */}
                   <CarouselItem>
-                    <div className="bg-white shadow-xl rounded-xl border border-gray-100 p-2 transform transition-all duration-500 hover:scale-105">
+                    <div className="bg-white rounded-xl border border-gray-100 p-2 transform transition-all duration-500 ">
                       <div className="overflow-hidden rounded-lg">
                         <div className="relative bg-gray-900 p-2 flex items-center">
                           <div className="flex items-center text-white text-xs">
@@ -107,7 +107,7 @@ const Hero: React.FC = () => {
                           </div>
                         </div>
                         <img
-                          src="/lovable-uploads/9d49a385-b2ee-4727-85b7-8d2bef5f05df.png"
+                          src="/after.png"
                           alt="Personalized Page"
                           className="w-full h-auto rounded-b-lg"
                         />
@@ -118,8 +118,8 @@ const Hero: React.FC = () => {
                     </div>
                   </CarouselItem>
                 </CarouselContent>
-                <CarouselPrevious className="left-0" />
-                <CarouselNext className="right-0" />
+                {/* <CarouselPrevious className="left-0" />
+                <CarouselNext className="right-0" /> */}
               </Carousel>
 
               {/* Conversion lift indicator */}
@@ -135,13 +135,13 @@ const Hero: React.FC = () => {
               </div>
 
               {/* Analytics graph mini */}
-              <div className="absolute -right-10 top-3/4 transform -translate-y-1/2 bg-white p-2 rounded-lg shadow-md border border-gray-100 animate-float floating-delay-2">
+              {/* <div className="absolute -right-10 top-3/4 transform -translate-y-1/2 bg-white p-2 rounded-lg shadow-md border border-gray-100 animate-float floating-delay-2">
                 <img
                   src="/lovable-uploads/158751dc-33f1-4227-8f17-efb45b5ce284.png"
                   alt="Analytics"
                   className="w-24 h-auto"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
