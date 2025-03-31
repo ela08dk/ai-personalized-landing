@@ -117,15 +117,15 @@ const AnimatedStats = () => {
     <>
       <div className="flex justify-center mb-8">
         <div className="text-7xl font-bold text-center gradient-text">
-          +{(7.6 * progress).toFixed(1)}%
+          +{(188.8 * progress).toFixed(0)}%
         </div>
       </div>
       <div className="space-y-3" ref={containerRef}>
-        {/* Referring Pages */}
-        <div className="flex justify-between text-sm">
-          <span>Referring Pages</span>
+        {/* Ad Keywords */}
+        <div className="flex justify-between text-sm mt-4">
+          <span>Ad Keywords</span>
           <span className="font-semibold">
-            +{(8.7 * progress).toFixed(1)}% avg. improvement
+            +{(192.3 * progress).toFixed(0)}% avg. improvement
           </span>
         </div>
         <div className="w-full bg-gray-100 rounded-full h-2">
@@ -135,17 +135,17 @@ const AnimatedStats = () => {
           ></div>
         </div>
 
-        {/* Ad Keywords */}
-        <div className="flex justify-between text-sm mt-4">
-          <span>Ad Keywords</span>
+        {/* Referring Pages */}
+        <div className="flex justify-between text-sm">
+          <span>Referring Pages</span>
           <span className="font-semibold">
-            +{(6.4 * progress).toFixed(1)}% avg. improvement
+            +{(173.2 * progress).toFixed(0)}% avg. improvement
           </span>
         </div>
         <div className="w-full bg-gray-100 rounded-full h-2">
           <div
             className="bg-gradient-to-r from-sky-300 to-purple-300 h-2 rounded-full"
-            style={{ width: `${64 * progress}%` }}
+            style={{ width: `${77 * progress}%` }}
           ></div>
         </div>
       </div>
