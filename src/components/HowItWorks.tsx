@@ -60,12 +60,12 @@ const HowItWorks: React.FC = () => {
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold">{step.title}</h3>
                 <p className="text-gray-600 text-lg">{step.description}</p>
-                <a
+                {/* <a
                   href="#"
                   className="inline-flex items-center text-craftera-dark font-medium"
                 >
                   Learn more <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
+                </a> */}
               </div>
 
               <div className="w-full md:w-1/2">
