@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
               </div>
               
               {/* Carousel animation for before/after */}
-              <Carousel className="w-full" autoplay>
+              <Carousel className="w-full" autoplay={true} autoplayInterval={5000}>
                 <CarouselContent>
                   {/* Original page */}
                   <CarouselItem>
