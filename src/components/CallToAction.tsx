@@ -12,7 +12,7 @@ const CallToAction: React.FC = () => {
             Ready to Personalise Your Landing Pages?
           </h2>
           <p className="text-lg opacity-80 mb-10">
-            Join hundreds of businesses already using Landin.ai to boost their
+            Join hundreds of businesses already using Tuneable to boost their
             conversion rates with AI personalization.
           </p>
 

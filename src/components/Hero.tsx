@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
               >
                 <CarouselContent>
                   {/* Original page */}
-                  <CarouselItem>
+                  {/* <CarouselItem>
                     <div className="bg-white rounded-xl border border-gray-100 p-2 transform transition-all duration-500 ">
                       <div className="overflow-hidden rounded-lg">
                         <div className="relative bg-gray-900 p-2 flex items-center">
@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                  </CarouselItem>
+                  </CarouselItem> */}
 
                   {/* AI personalized page */}
                   <CarouselItem>
@@ -110,13 +110,13 @@ const Hero: React.FC = () => {
                           </div>
                         </div>
                         <img
-                          src="/after.png"
+                          src="/3.gif"
                           alt="Personalized Page"
                           className="w-full h-auto rounded-b-lg"
                         />
-                        <div className="absolute top-8 left-0 bg-craftera-green px-2 py-1 rounded-r-md text-xs font-semibold">
+                        {/* <div className="absolute top-8 left-0 bg-craftera-green px-2 py-1 rounded-r-md text-xs font-semibold">
                           After AI Personalisation
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </CarouselItem>
