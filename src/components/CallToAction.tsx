@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Anchor, Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import VideoDialog from "./VideoDialog";
 
@@ -17,9 +17,12 @@ const CallToAction: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white hover:bg-gray-100 text-craftera-dark px-8 py-6 text-lg">
+            <Anchor
+              className="bg-white hover:bg-gray-100 text-craftera-dark px-8 py-6 text-lg"
+              href="https://page-variants-ui-g1z04.kinsta.page/"
+            >
               Get Started
-            </Button>
+            </Anchor>
             <VideoDialog>
               <Button
                 variant="outline"

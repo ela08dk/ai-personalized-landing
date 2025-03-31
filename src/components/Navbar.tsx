@@ -37,9 +37,9 @@ const Navbar: React.FC = () => {
           </a>
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           <a
-            href="#demo"
+            href="https://page-variants-ui-g1z04.kinsta.page/"
             className="hidden md:inline-flex text-gray-700 hover:text-gray-900"
           >
             Watch Demo

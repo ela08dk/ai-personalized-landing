@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Anchor, Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import VideoDialog from "./VideoDialog";
 import {
@@ -27,9 +27,12 @@ const Hero: React.FC = () => {
               rates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button className="bg-craftera-dark hover:bg-black text-white px-8 py-6 text-lg">
+              <Anchor
+                className="bg-craftera-dark hover:bg-black text-white px-8 py-6 text-lg"
+                href="https://page-variants-ui-g1z04.kinsta.page/"
+              >
                 Get Started
-              </Button>
+              </Anchor>
               <VideoDialog>
                 <Button
                   variant="outline"
