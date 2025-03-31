@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
+import VideoDialog from './VideoDialog';
 
 const Hero: React.FC = () => {
   return (
@@ -21,10 +22,12 @@ const Hero: React.FC = () => {
               <Button className="bg-craftera-dark hover:bg-black text-white px-8 py-6 text-lg">
                 Get Started
               </Button>
-              <Button variant="outline" className="border-craftera-dark text-craftera-dark hover:bg-craftera-dark/5 px-8 py-6 text-lg">
-                <Play size={18} className="mr-2" />
-                Watch Demo
-              </Button>
+              <VideoDialog>
+                <Button variant="outline" className="border-craftera-dark text-craftera-dark hover:bg-craftera-dark/5 px-8 py-6 text-lg">
+                  <Play size={18} className="mr-2" />
+                  Watch Demo
+                </Button>
+              </VideoDialog>
             </div>
           </div>
           
