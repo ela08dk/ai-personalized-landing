@@ -10,7 +10,9 @@ const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Personalise your website, <span className="gradient-text">for every visit</span>
+              Personalise your website.
+              <br />
+              <span className="gradient-text">For every visit.</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-xl">
               Our AI agent personalizes every website visit, creating unique experiences for each traffic source to maximize your conversion rates.

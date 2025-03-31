@@ -7,19 +7,19 @@ const steps = [
     number: '01',
     title: 'Connect Your Accounts',
     description: 'Link your Google Analytics and Google Ads accounts to import your traffic and campaign data.',
-    image: '/lovable-uploads/6d8e8f6d-f881-4ce7-80ec-a34941bf7bcb.png'
+    image: '/lovable-uploads/715a0832-4b24-4a9b-bdea-8946367d7f44.png'
   },
   {
     number: '02',
     title: 'Import & Analyze Data',
     description: 'Our AI analyzes your traffic sources and visitor behavior to identify optimization opportunities.',
-    image: '/lovable-uploads/1fa9d3ea-0f56-4143-b053-3ee23963175f.png'
+    image: '/lovable-uploads/68f34569-67e1-4095-a66d-6bfc019f9a3d.png'
   },
   {
     number: '03',
     title: 'AI Generates Personalized Pages',
     description: 'Based on the analysis, the AI creates custom landing pages for each traffic source.',
-    image: '/lovable-uploads/93ac3c30-949a-42c1-a119-342798716769.png'
+    image: '/lovable-uploads/ecd51a20-9667-4fe6-b23d-f21c4f420ca8.png'
   },
   {
     number: '04',

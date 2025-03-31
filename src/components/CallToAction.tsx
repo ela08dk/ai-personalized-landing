@@ -19,9 +19,9 @@ const CallToAction: React.FC = () => {
             <Button className="bg-white hover:bg-gray-100 text-craftera-dark px-8 py-6 text-lg">
               Get Started
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg flex items-center">
+            <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
               <Play size={18} className="mr-2" />
-              <span>Watch Demo</span>
+              Watch Demo
             </Button>
           </div>
         </div>
