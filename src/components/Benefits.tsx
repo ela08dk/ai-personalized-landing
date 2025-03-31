@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { Check } from 'lucide-react';
+import React, { useEffect, useRef, useState } from "react";
+import { Check } from "lucide-react";
 
 const benefitsList = [
   "Increase conversion rates by up to 30%",
@@ -8,7 +7,7 @@ const benefitsList = [
   "No need for manual A/B testing or copywriting",
   "Works 24/7 to continuously optimize your pages",
   "Easy to set up with your existing Google accounts",
-  "No technical skills required to create personalized pages"
+  "No technical skills required to create personalized pages",
 ];
 
 const Benefits: React.FC = () => {
@@ -21,12 +20,18 @@ const Benefits: React.FC = () => {
               Why We Built <span className="gradient-text">Craftera</span>
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Every visitor to your website is unique. Someone who comes from a Google ad targeting competitor keywords is different from someone who visited from a news article. Creating unique copy for each traffic source and iterating thousands of times would have been impossible.
+              Every visitor to your website is unique. Someone who comes from a
+              Google ad targeting competitor keywords is different from someone
+              who visited from a news article. Creating unique copy for each
+              traffic source and iterating thousands of times would have been
+              impossible.
             </p>
             <p className="text-lg text-gray-600 mb-8">
-              An AI agent can work continuously over many days through thousands of small feedback loops until the traffic that converts most is found.
+              An AI agent can work continuously over many days through thousands
+              of small feedback loops until the traffic that converts most is
+              found.
             </p>
-            
+
             <div className="space-y-4">
               {benefitsList.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
@@ -38,36 +43,20 @@ const Benefits: React.FC = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-radial from-craftera-purple/30 to-transparent rounded-full blur-3xl"></div>
             <div className="relative bg-white shadow-xl rounded-xl border border-gray-100 p-8">
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2">Boost Your Conversion Rates</h3>
-                <p className="text-gray-600">Average improvement across all traffic sources</p>
+                <h3 className="text-2xl font-bold mb-2">
+                  Boost Your Conversion Rates
+                </h3>
+                <p className="text-gray-600">
+                  Average improvement across all traffic sources
+                </p>
               </div>
-              
-              <div className="flex justify-center mb-8">
-                <div className="text-7xl font-bold text-center gradient-text">+7.6%</div>
-              </div>
-              
-              <div className="space-y-3">
-                <div className="flex justify-between text-sm">
-                  <span>Referring Pages</span>
-                  <span className="font-semibold">+8.7% avg. improvement</span>
-                </div>
-                <div className="w-full bg-gray-100 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-craftera-purple to-craftera-blue h-2 rounded-full" style={{ width: '87%' }}></div>
-                </div>
-                
-                <div className="flex justify-between text-sm mt-4">
-                  <span>Ad Keywords</span>
-                  <span className="font-semibold">+6.4% avg. improvement</span>
-                </div>
-                <div className="w-full bg-gray-100 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-craftera-blue to-craftera-green h-2 rounded-full" style={{ width: '64%' }}></div>
-                </div>
-              </div>
+
+              <AnimatedStats />
             </div>
           </div>
         </div>
@@ -77,3 +66,89 @@ const Benefits: React.FC = () => {
 };
 
 export default Benefits;
+
+const AnimatedStats = () => {
+  const [progress, setProgress] = useState(0);
+  const containerRef = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const duration = 4000;
+
+  const easeOut = (t: number) => Math.sqrt(1 - Math.pow(t - 1, 2));
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            const startTime = performance.now();
+
+            const animate = (currentTime) => {
+              const elapsed = currentTime - startTime;
+              const linearProgress = Math.min(elapsed / duration, 1);
+              const easedProgress = easeOut(linearProgress);
+              setProgress(easedProgress);
+              if (elapsed < duration) {
+                requestAnimationFrame(animate);
+              }
+            };
+
+            requestAnimationFrame(animate);
+          }
+        });
+      },
+      {
+        threshold: 0,
+      }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, [hasAnimated, duration]);
+
+  return (
+    <>
+      <div className="flex justify-center mb-8">
+        <div className="text-7xl font-bold text-center gradient-text">
+          +{(7.6 * progress).toFixed(1)}%
+        </div>
+      </div>
+      <div className="space-y-3" ref={containerRef}>
+        {/* Referring Pages */}
+        <div className="flex justify-between text-sm">
+          <span>Referring Pages</span>
+          <span className="font-semibold">
+            +{(8.7 * progress).toFixed(1)}% avg. improvement
+          </span>
+        </div>
+        <div className="w-full bg-gray-100 rounded-full h-2">
+          <div
+            className="bg-gradient-to-r from-sky-300 to-purple-300 h-2 rounded-full"
+            style={{ width: `${87 * progress}%` }}
+          ></div>
+        </div>
+
+        {/* Ad Keywords */}
+        <div className="flex justify-between text-sm mt-4">
+          <span>Ad Keywords</span>
+          <span className="font-semibold">
+            +{(6.4 * progress).toFixed(1)}% avg. improvement
+          </span>
+        </div>
+        <div className="w-full bg-gray-100 rounded-full h-2">
+          <div
+            className="bg-gradient-to-r from-sky-300 to-purple-300 h-2 rounded-full"
+            style={{ width: `${64 * progress}%` }}
+          ></div>
+        </div>
+      </div>
+    </>
+  );
+};
