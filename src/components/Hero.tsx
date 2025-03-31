@@ -3,6 +3,13 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import VideoDialog from './VideoDialog';
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext
+} from "@/components/ui/carousel";
 
 const Hero: React.FC = () => {
   return (
@@ -31,94 +38,96 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <div className="relative overflow-visible">
-            {/* Referring page analytics overlay */}
-            <div className="absolute -top-16 -left-4 z-10 md:block hidden">
-              <div className="bg-white rounded-lg shadow-lg p-3 text-xs">
-                <div className="flex items-center gap-2 font-medium text-gray-800">
-                  <div className="w-3 h-3 bg-craftera-purple rounded-full"></div>
-                  <span>Referring Page: businessexpert.co.uk/cot-vs-amex</span>
-                </div>
-                <div className="mt-1 text-gray-500">
-                  <div className="flex items-center justify-between">
-                    <span>Visitors: 213</span>
+          <div className="relative h-[400px] flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-radial from-craftera-purple/20 to-transparent rounded-full blur-3xl"></div>
+            
+            <div className="relative w-full max-w-md">
+              {/* Referring page analytics overlay */}
+              <div className="absolute -top-12 -left-4 z-10 animate-float">
+                <div className="bg-white rounded-lg shadow-lg p-3 text-xs">
+                  <div className="flex items-center gap-2 font-medium text-gray-800">
+                    <div className="w-3 h-3 bg-craftera-purple rounded-full"></div>
+                    <span>Referring Page: businessexpert.co.uk/cot-vs-amex</span>
+                  </div>
+                  <div className="mt-1 text-gray-500">
+                    <div className="flex items-center justify-between">
+                      <span>Visitors: 213</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            
-            {/* Main transformation showcase */}
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-radial from-craftera-purple/20 to-transparent rounded-full blur-3xl"></div>
               
-              {/* Before and after container */}
-              <div className="relative">
-                {/* Original page */}
-                <div className="bg-white shadow-xl rounded-xl border border-gray-100 p-2 mb-4 transform -rotate-2">
-                  <div className="overflow-hidden rounded-lg">
-                    <div className="relative bg-gray-900 p-2 flex items-center">
-                      <div className="flex items-center text-white text-xs">
-                        <div className="w-2 h-2 rounded-full bg-red-500 mr-1"></div>
-                        <div className="w-2 h-2 rounded-full bg-yellow-500 mr-1"></div>
-                        <div className="w-2 h-2 rounded-full bg-green-500 mr-1"></div>
-                        <span className="ml-2">capitolontap.com</span>
+              {/* Carousel animation for before/after */}
+              <Carousel className="w-full" autoplay>
+                <CarouselContent>
+                  {/* Original page */}
+                  <CarouselItem>
+                    <div className="bg-white shadow-xl rounded-xl border border-gray-100 p-2 transform transition-all duration-500 hover:scale-105">
+                      <div className="overflow-hidden rounded-lg">
+                        <div className="relative bg-gray-900 p-2 flex items-center">
+                          <div className="flex items-center text-white text-xs">
+                            <div className="w-2 h-2 rounded-full bg-red-500 mr-1"></div>
+                            <div className="w-2 h-2 rounded-full bg-yellow-500 mr-1"></div>
+                            <div className="w-2 h-2 rounded-full bg-green-500 mr-1"></div>
+                            <span className="ml-2">capitolontap.com</span>
+                          </div>
+                        </div>
+                        <img 
+                          src="/lovable-uploads/f03b2e75-ce1a-4235-99a5-0c5c4bb5b0a2.png" 
+                          alt="Original Page" 
+                          className="w-full h-auto rounded-b-lg"
+                        />
+                        <div className="absolute top-8 left-0 bg-craftera-cream px-2 py-1 rounded-r-md text-xs font-semibold">
+                          Original Page
+                        </div>
                       </div>
                     </div>
-                    <img 
-                      src="/lovable-uploads/f03b2e75-ce1a-4235-99a5-0c5c4bb5b0a2.png" 
-                      alt="Original Page" 
-                      className="w-full h-auto rounded-b-lg"
-                    />
-                    <div className="absolute top-8 left-0 bg-craftera-cream px-2 py-1 rounded-r-md text-xs font-semibold">
-                      Original Page
-                    </div>
-                  </div>
-                </div>
-                
-                {/* AI personalized arrow */}
-                <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 bg-craftera-purple text-white rounded-full p-2 shadow-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
-                </div>
-                
-                {/* AI personalized page */}
-                <div className="bg-white shadow-xl rounded-xl border border-gray-100 p-2 transform rotate-1">
-                  <div className="overflow-hidden rounded-lg">
-                    <div className="relative bg-gray-900 p-2 flex items-center">
-                      <div className="flex items-center text-white text-xs">
-                        <div className="w-2 h-2 rounded-full bg-red-500 mr-1"></div>
-                        <div className="w-2 h-2 rounded-full bg-yellow-500 mr-1"></div>
-                        <div className="w-2 h-2 rounded-full bg-green-500 mr-1"></div>
-                        <span className="ml-2">capitolontap.com</span>
+                  </CarouselItem>
+                  
+                  {/* AI personalized page */}
+                  <CarouselItem>
+                    <div className="bg-white shadow-xl rounded-xl border border-gray-100 p-2 transform transition-all duration-500 hover:scale-105">
+                      <div className="overflow-hidden rounded-lg">
+                        <div className="relative bg-gray-900 p-2 flex items-center">
+                          <div className="flex items-center text-white text-xs">
+                            <div className="w-2 h-2 rounded-full bg-red-500 mr-1"></div>
+                            <div className="w-2 h-2 rounded-full bg-yellow-500 mr-1"></div>
+                            <div className="w-2 h-2 rounded-full bg-green-500 mr-1"></div>
+                            <span className="ml-2">capitolontap.com</span>
+                          </div>
+                        </div>
+                        <img 
+                          src="/lovable-uploads/9d49a385-b2ee-4727-85b7-8d2bef5f05df.png" 
+                          alt="Personalized Page" 
+                          className="w-full h-auto rounded-b-lg"
+                        />
+                        <div className="absolute top-8 left-0 bg-craftera-green px-2 py-1 rounded-r-md text-xs font-semibold">
+                          After AI Personalisation
+                        </div>
                       </div>
                     </div>
-                    <img 
-                      src="/lovable-uploads/9d49a385-b2ee-4727-85b7-8d2bef5f05df.png" 
-                      alt="Personalized Page" 
-                      className="w-full h-auto rounded-b-lg"
-                    />
-                    <div className="absolute top-8 left-0 bg-craftera-green px-2 py-1 rounded-r-md text-xs font-semibold">
-                      After AI Personalisation
-                    </div>
-                  </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-0" />
+                <CarouselNext className="right-0" />
+              </Carousel>
+              
+              {/* Conversion lift indicator */}
+              <div className="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-lg transform rotate-3 z-10 animate-float floating-delay-1">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">+</div>
+                  <span className="text-gray-800 font-semibold whitespace-nowrap">7.5% Conversion Lift</span>
                 </div>
               </div>
-            </div>
-
-            {/* Conversion lift indicator */}
-            <div className="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-lg transform rotate-3 z-10">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">+</div>
-                <span className="text-gray-800 font-semibold whitespace-nowrap">7.5% Conversion Lift</span>
+              
+              {/* Analytics graph mini */}
+              <div className="absolute -right-10 top-3/4 transform -translate-y-1/2 bg-white p-2 rounded-lg shadow-md border border-gray-100 animate-float floating-delay-2">
+                <img 
+                  src="/lovable-uploads/158751dc-33f1-4227-8f17-efb45b5ce284.png" 
+                  alt="Analytics" 
+                  className="w-24 h-auto"
+                />
               </div>
-            </div>
-            
-            {/* Analytics graph mini */}
-            <div className="absolute -right-10 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-lg shadow-md border border-gray-100 md:block hidden">
-              <img 
-                src="/lovable-uploads/158751dc-33f1-4227-8f17-efb45b5ce284.png" 
-                alt="Analytics" 
-                className="w-24 h-auto"
-              />
             </div>
           </div>
         </div>
