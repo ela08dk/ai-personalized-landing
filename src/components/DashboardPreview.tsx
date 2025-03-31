@@ -28,7 +28,7 @@ const DashboardPreview: React.FC = () => {
                 ↑
               </div>
               <span className="text-gray-800 font-semibold whitespace-nowrap text-sm sm:text-base">
-                Average 7.6% Conversion Lift
+                Average 188.8% Conversion Lift
               </span>
             </div>
           </div>
@@ -51,7 +51,7 @@ const DashboardPreview: React.FC = () => {
 
           <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
             <div className="text-4xl font-bold mb-2 text-craftera-dark">
-              7.6%
+              188.8%
             </div>
             <div className="text-gray-500">Average Conversion Rate</div>
           </div>
