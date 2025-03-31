@@ -72,6 +72,7 @@ const Hero: React.FC = () => {
                             <span className="ml-2">capitolontap.com</span>
                           </div>
                         </div>
+
                         <img 
                           src="/lovable-uploads/f03b2e75-ce1a-4235-99a5-0c5c4bb5b0a2.png" 
                           alt="Original Page" 
