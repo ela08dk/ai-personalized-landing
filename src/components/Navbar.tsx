@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center gap-2">
           <img 
-            src="/lovable-uploads/67f58851-1353-4923-b0df-41726ce414ab.png" 
+            src="/lovable-uploads/d7797353-d7c2-4886-a480-0e9a6a32501f.png" 
             alt="Craftera Logo" 
             className="w-10 h-10"
           />
