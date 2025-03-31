@@ -7,28 +7,28 @@ const steps = [
     title: "Connect Your Accounts",
     description:
       "Link your Google Analytics and Google Ads accounts to import your traffic and campaign data.",
-    image: "import-step.png",
+    image: "1st.gif",
   },
   {
     number: "02",
     title: "Import & Analyze Data",
     description:
       "Our AI analyzes your traffic sources and visitor behavior to identify optimization opportunities.",
-    image: "import-progress-step.png",
+    image: "2.gif",
   },
   {
     number: "03",
     title: "AI Generates Personalized Pages",
     description:
       "Based on the analysis, the AI creates custom landing pages for each traffic source.",
-    image: "content-edit-step.png",
+    image: "3.gif",
   },
   {
     number: "04",
     title: "Continuous Optimization",
     description:
       "The AI runs thousands of A/B tests to refine and improve each landing page over time.",
-    image: "/lovable-uploads/634f7fc9-9f99-4327-96b9-f7df0b8ec43c.png",
+    image: "improvement2.gif",
   },
 ];
 
