@@ -1,5 +1,6 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Anchor, Button } from "@/components/ui/button";
+import VideoDialog from "./VideoDialog";
 
 const Navbar: React.FC = () => {
   return (
@@ -38,15 +39,17 @@ const Navbar: React.FC = () => {
         </nav>
 
         <div className="flex items-center gap-6">
-          <a
+          <VideoDialog>
+            <button className="hidden md:inline-flex text-gray-700 hover:text-gray-900">
+              Watch Demo
+            </button>
+          </VideoDialog>
+          <Anchor
+            className="bg-craftera-dark hover:bg-black text-white"
             href="https://page-variants-ui-g1z04.kinsta.page/"
-            className="hidden md:inline-flex text-gray-700 hover:text-gray-900"
           >
-            Watch Demo
-          </a>
-          <Button className="bg-craftera-dark hover:bg-black text-white">
             Get Started
-          </Button>
+          </Anchor>
         </div>
       </div>
     </header>
