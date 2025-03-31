@@ -45,7 +45,7 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-sky-400 via-purple-400/80 to-fuchsia-300 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-sky-500/75 via-purple-400/80 to-fuchsia-300 bg-clip-text text-transparent;
   }
 
   .gradient-bg {

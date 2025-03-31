@@ -38,7 +38,7 @@ const HowItWorks: React.FC = () => {
       <div className="max-container">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            How <span className="gradient-text">Craftera Works</span>
+            How <span className="gradient-text">Landin.ai Works</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Our AI agent works tirelessly to create personalized experiences
@@ -60,12 +60,12 @@ const HowItWorks: React.FC = () => {
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold">{step.title}</h3>
                 <p className="text-gray-600 text-lg">{step.description}</p>
-                <a
+                {/* <a
                   href="#"
                   className="inline-flex items-center text-craftera-dark font-medium"
                 >
                   Learn more <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
+                </a> */}
               </div>
 
               <div className="w-full md:w-1/2">

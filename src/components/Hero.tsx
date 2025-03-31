@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Anchor, Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import VideoDialog from "./VideoDialog";
 import {
@@ -22,18 +22,21 @@ const Hero: React.FC = () => {
               <span className="gradient-text">For every visit.</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-xl">
-              Our AI agent personalizes every website visit, creating unique
+              Our AI personalizes every website visit, creating unique
               experiences for each traffic source to maximize your conversion
               rates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button className="bg-craftera-dark hover:bg-black text-white px-8 py-6 text-lg">
+              <Anchor
+                className="bg-craftera-dark hover:bg-black text-white px-8 py-6 text-lg"
+                href="https://page-variants-ui-g1z04.kinsta.page/"
+              >
                 Get Started
-              </Button>
+              </Anchor>
               <VideoDialog>
                 <Button
                   variant="outline"
-                  className="border-craftera-dark text-craftera-dark hover:bg-craftera-dark/5 px-8 py-6 text-lg"
+                  className="border-craftera-dark/25 text-craftera-dark hover:bg-craftera-dark/5 px-8 py-6 text-lg"
                 >
                   <Play size={18} className="mr-2" />
                   Watch Demo
