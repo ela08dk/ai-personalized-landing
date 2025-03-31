@@ -38,8 +38,9 @@ const Features: React.FC = () => {
             <span className="gradient-text">AI</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI agent works tirelessly to create and optimize unique landing
-            pages for each traffic source.
+            Our AI automatically creates and optimizes unique landing pages for
+            each traffic source, delivering the right message to the right
+            audience.
           </p>
         </div>
 
