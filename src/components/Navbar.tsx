@@ -7,7 +7,11 @@ const Navbar: React.FC = () => {
     <header className="w-full py-4 px-4 sm:px-6 lg:px-8 border-b border-gray-100">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-gradient-to-br from-craftera-purple to-craftera-blue rounded-lg"></div>
+          <img 
+            src="/lovable-uploads/67f58851-1353-4923-b0df-41726ce414ab.png" 
+            alt="Craftera Logo" 
+            className="w-10 h-10"
+          />
           <span className="text-xl font-bold text-craftera-dark">Craftera</span>
         </div>
         
