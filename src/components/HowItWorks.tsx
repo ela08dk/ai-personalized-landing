@@ -7,7 +7,7 @@ const steps = [
     title: "Connect Your Accounts",
     description:
       "Link your Google Analytics and Google Ads accounts to import your traffic and campaign data.",
-    image: "1st.gif",
+    image: "image.png",
   },
   {
     number: "02",
