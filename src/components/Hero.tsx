@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
 
             <div className="relative w-full">
               {/* Referring page analytics overlay */}
-              <div className="absolute -top-10 -left-4 z-10 animate-float">
+              <div className="absolute -top-10 -left-4 z-10 animate-float hidden sm:block">
                 <div className="bg-white rounded-lg shadow-lg p-3 text-xs">
                   <div className="flex items-center gap-2 font-medium text-gray-800">
                     <div className="w-3 h-3 bg-craftera-purple rounded-full"></div>
