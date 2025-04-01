@@ -41,11 +41,11 @@ const HowItWorks: React.FC = () => {
       <div className="max-container">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            How <span className="gradient-text">newmode Works</span>
+            How <span className="gradient-text">newmode.ai Works</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI agent works tirelessly to create personalized experiences
-            that convert more visitors into customers.
+            Our AI works tirelessly to create personalized experiences that
+            convert more visitors into customers.
           </p>
         </div>
 

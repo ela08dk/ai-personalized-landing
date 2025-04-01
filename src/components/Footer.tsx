@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
               className="w-10 h-10"
             />
             <span className="text-xl font-bold text-craftera-dark">
-              newmode
+              newmode<span className="gradient-text">.ai</span>
             </span>
           </div>
         </div>
