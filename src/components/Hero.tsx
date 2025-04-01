@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Anchor, Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
@@ -132,7 +133,7 @@ const Hero: React.FC = () => {
                     +
                   </div>
                   <span className="text-gray-800 font-semibold whitespace-nowrap">
-                    188.8% Conversion Lift
+                    188% Conversion Lift
                   </span>
                 </div>
               </div>

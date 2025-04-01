@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const DashboardPreview: React.FC = () => {
@@ -28,7 +29,7 @@ const DashboardPreview: React.FC = () => {
                 ↑
               </div>
               <span className="text-gray-800 font-semibold whitespace-nowrap text-sm sm:text-base">
-                Average 188.8% Conversion Lift
+                Average 188% Conversion Lift
               </span>
             </div>
           </div>
@@ -37,21 +38,21 @@ const DashboardPreview: React.FC = () => {
         <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
             <div className="text-4xl font-bold mb-2 text-craftera-dark">
-              19,333
+              2M
             </div>
             <div className="text-gray-500">Visitors Analyzed</div>
           </div>
 
           <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
             <div className="text-4xl font-bold mb-2 text-craftera-dark">
-              1,460
+              3,680
             </div>
             <div className="text-gray-500">Conversions Generated</div>
           </div>
 
           <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
             <div className="text-4xl font-bold mb-2 text-craftera-dark">
-              188.8%
+              188%
             </div>
             <div className="text-gray-500">Average Conversion Rate</div>
           </div>

@@ -107,7 +107,7 @@ const FAQ: React.FC = () => {
                 How do I contact you with questions?
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4 text-gray-600">
-                Tweet us on X at @newmode_ai (#) (replace with your actual handle). We monitor messages daily and respond within 24 hours, often faster. For technical issues, include specifics like error messages or browser details. We don't offer phone or email support at this time—X is our primary channel for quick, public-facing responses.
+                Tweet us on X at <a href="https://x.com/newmode_ai" className="text-blue-600 hover:underline">@newmode_ai</a>. We monitor messages daily and respond within 24 hours, often faster. For technical issues, include specifics like error messages or browser details. We don't offer phone or email support at this time—X is our primary channel for quick, public-facing responses.
               </AccordionContent>
             </AccordionItem>
 
