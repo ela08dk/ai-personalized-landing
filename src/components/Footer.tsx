@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const Footer: React.FC = () => {
@@ -22,7 +23,7 @@ const Footer: React.FC = () => {
             © {new Date().getFullYear()} newmode. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0 md:ml-6">
-            <a href="#" className="text-gray-400 hover:text-gray-500">
+            <a href="https://twitter.com/newmode_ai" className="text-gray-400 hover:text-gray-500">
               Twitter
             </a>
             <a href="#" className="text-gray-400 hover:text-gray-500">
