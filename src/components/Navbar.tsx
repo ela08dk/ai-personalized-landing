@@ -12,7 +12,9 @@ const Navbar: React.FC = () => {
             alt="newmode Logo"
             className="w-10 h-10"
           />
-          <span className="text-xl font-bold text-craftera-dark">newmode</span>
+          <span className="text-xl font-bold text-craftera-dark">
+            newmode<span className="gradient-text">.ai</span>
+          </span>
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">
