@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -6,6 +7,7 @@ import DashboardPreview from "@/components/DashboardPreview";
 import HowItWorks from "@/components/HowItWorks";
 import Benefits from "@/components/Benefits";
 import CallToAction from "@/components/CallToAction";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -18,6 +20,7 @@ const Index = () => {
         <DashboardPreview />
         <HowItWorks />
         <Benefits />
+        <FAQ />
         <CallToAction />
       </main>
       <Footer />
