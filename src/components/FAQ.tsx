@@ -24,37 +24,37 @@ const FAQ: React.FC = () => {
           <Accordion type="single" collapsible className="space-y-4">
             <AccordionItem value="item-1" className="bg-white rounded-lg shadow-sm border border-gray-100">
               <AccordionTrigger className="px-6 py-4 text-lg font-medium text-left">
-                Do you host the landing pages?
+                What results should I expect?
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4 text-gray-600">
+                Newmode aims to increase conversions by delivering personalized pages that match visitor intent. For example, a visitor from a competitor-targeted Google Ad might see copy highlighting your advantages, while someone from a news article sees a different angle. Industry data shows personalized pages can lift conversion rates by 10-30% on average, with top cases seeing up to 10x improvement over generic pages. Results depend on traffic volume, your baseline conversion rate, and how well your offer aligns with visitors. You'll get detailed performance metrics via our dashboard, tied to your Google Analytics data.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2" className="bg-white rounded-lg shadow-sm border border-gray-100">
+              <AccordionTrigger className="px-6 py-4 text-lg font-medium text-left">
+                Do I need to migrate from my current hosting provider?
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4 text-gray-600">
                 No, Newmode does not host landing pages. It integrates with your existing website builder—such as WordPress, Webflow, Framer, or a custom-built site. Our tool dynamically generates personalized content and runs A/B tests on your site without requiring you to change your hosting setup.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-2" className="bg-white rounded-lg shadow-sm border border-gray-100">
+            <AccordionItem value="item-3" className="bg-white rounded-lg shadow-sm border border-gray-100">
               <AccordionTrigger className="px-6 py-4 text-lg font-medium text-left">
                 How does installation work?
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4 text-gray-600">
-                Installation is straightforward. You add a small JavaScript snippet to your website's code, typically in the &lt;head&gt; or &lt;body&gt; section. Once embedded, Newmode operates client-side, meaning all personalization and testing happen in the visitor's browser. It connects to your Google Analytics and Google Ads accounts via API (you'll need to grant secure access during setup), pulling referral data and ad keywords to tailor content. No server-side changes are needed.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3" className="bg-white rounded-lg shadow-sm border border-gray-100">
-              <AccordionTrigger className="px-6 py-4 text-lg font-medium text-left">
-                How are you different from Loveable?
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4 text-gray-600">
-                Loveable is a website and app builder focused on creating sites from scratch. Newmode isn't a builder—it's an optimization layer. We plug into your existing site (which could be built with Loveable or any other tool) and enhance it by generating personalized copy for each traffic source and ad keyword. Our focus is on automating A/B testing and refining messaging to boost conversions, not on designing the site itself.
+                Installation is straightforward. You add a small JavaScript snippet to your website's code, typically in the &lt;head&gt; or &lt;body&gt; section. Once embedded, Newmode operates client-side, meaning all personalization and testing happen in the visitor's browser. No server-side changes are needed.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4" className="bg-white rounded-lg shadow-sm border border-gray-100">
               <AccordionTrigger className="px-6 py-4 text-lg font-medium text-left">
-                What results should I expect?
+                How are you different from Loveable?
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4 text-gray-600">
-                Newmode aims to increase conversions by delivering personalized pages that match visitor intent. For example, a visitor from a competitor-targeted Google Ad might see copy highlighting your advantages, while someone from a news article sees a different angle. Industry data shows personalized pages can lift conversion rates by 10-30% on average, with top cases seeing up to 10x improvement over generic pages. Results depend on traffic volume, your baseline conversion rate, and how well your offer aligns with visitors. You'll get detailed performance metrics via our dashboard, tied to your Google Analytics data.
+                Loveable is a website and app builder focused on creating sites from scratch. Newmode isn't a builder—it's an optimization layer. We plug into your existing site (which could be built with Loveable or any other tool) and enhance it by generating personalized copy for each traffic source and ad keyword. Our focus is on automating A/B testing and refining messaging to boost conversions, not on designing the site itself.
               </AccordionContent>
             </AccordionItem>
 
