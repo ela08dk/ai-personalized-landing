@@ -18,7 +18,7 @@ const DashboardPreview: React.FC = () => {
         <div className="relative rounded-xl overflow-hidden shadow-2xl border border-gray-100">
           <img
             src="/lovable-uploads/634f7fc9-9f99-4327-96b9-f7df0b8ec43c.png"
-            alt="Tuneable Dashboard"
+            alt="newmode Dashboard"
             className="w-full h-auto"
           />
 

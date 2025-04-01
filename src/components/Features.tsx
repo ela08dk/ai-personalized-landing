@@ -7,24 +7,28 @@ const featureData = [
     title: "Google Analytics Integration",
     description:
       "Connect your Google Analytics to analyze traffic sources and visitor behavior patterns.",
+    href: "#how-it-works-connect-accounts",
   },
   {
     icon: <Zap className="w-12 h-12 text-pink-300" />,
     title: "Google Ads Connection",
     description:
       "Link your Google Ads account to optimize landing pages for each ad keyword and campaign.",
+    href: "#how-it-works-connect-accounts",
   },
   {
     icon: <RefreshCw className="w-12 h-12 text-sky-300" />,
     title: "Continuous A/B Testing",
     description:
       "Our AI automatically runs thousands of micro-tests to find the perfect copy for each traffic source.",
+    href: "#how-it-works-optimization",
   },
   {
     icon: <Layers className="w-12 h-12 text-orange-200" />,
     title: "Personalized Landing Pages",
     description:
       "Generate unique experiences for each visitor based on their referral source and intent.",
+    href: "#how-it-works-generate-pages",
   },
 ];
 
@@ -54,7 +58,7 @@ const Features: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-600 mb-4">{feature.description}</p>
               <a
-                href="#"
+                href={feature.href}
                 className="inline-flex items-center text-craftera-dark font-medium"
               >
                 Learn more <ArrowRight className="ml-2 w-4 h-4" />

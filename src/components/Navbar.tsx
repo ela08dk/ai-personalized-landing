@@ -9,10 +9,12 @@ const Navbar: React.FC = () => {
         <div className="flex items-center gap-2">
           <img
             src="/lovable-uploads/d7797353-d7c2-4886-a480-0e9a6a32501f.png"
-            alt="Tuneable Logo"
+            alt="newmode Logo"
             className="w-10 h-10"
           />
-          <span className="text-xl font-bold text-craftera-dark">Tuneable</span>
+          <span className="text-xl font-bold text-craftera-dark">
+            newmode<span className="gradient-text">.ai</span>
+          </span>
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">

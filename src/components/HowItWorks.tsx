@@ -1,5 +1,4 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
 
 const steps = [
   {
@@ -8,6 +7,7 @@ const steps = [
     description:
       "Link your Google Analytics and Google Ads accounts to import your traffic and campaign data.",
     image: "image.png",
+    id: "how-it-works-connect-accounts",
   },
   {
     number: "02",
@@ -15,6 +15,7 @@ const steps = [
     description:
       "Our AI analyzes your traffic sources and visitor behavior to identify optimization opportunities.",
     image: "2.gif",
+    id: "how-it-works-analyze-data",
   },
   {
     number: "03",
@@ -22,6 +23,7 @@ const steps = [
     description:
       "Based on the analysis, the AI creates custom landing pages for each traffic source.",
     image: "3.gif",
+    id: "how-it-works-generate-pages",
   },
   {
     number: "04",
@@ -29,6 +31,7 @@ const steps = [
     description:
       "The AI runs thousands of A/B tests to refine and improve each landing page over time.",
     image: "improvement2.gif",
+    id: "how-it-works-optimization",
   },
 ];
 
@@ -38,11 +41,11 @@ const HowItWorks: React.FC = () => {
       <div className="max-container">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            How <span className="gradient-text">Tuneable Works</span>
+            How <span className="gradient-text">newmode.ai Works</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI agent works tirelessly to create personalized experiences
-            that convert more visitors into customers.
+            Our AI works tirelessly to create personalized experiences that
+            convert more visitors into customers.
           </p>
         </div>
 
@@ -52,7 +55,8 @@ const HowItWorks: React.FC = () => {
               key={index}
               className={`flex flex-col ${
                 index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
-              } gap-8 md:gap-16 items-center`}
+              } gap-8 md:gap-16 items-center scroll-mt-24`}
+              id={step.id}
             >
               <div className="w-full md:w-1/2 space-y-6">
                 <div className="inline-block px-4 py-1 rounded-full bg-craftera-cream/60 text-craftera-dark font-medium text-sm">
