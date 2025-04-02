@@ -10,10 +10,10 @@ const Hero: React.FC = () => {
   const [wordIndex, setWordIndex] = useState(0);
   const [cursorVisible, setCursorVisible] = useState(true);
   
-  const words = ["visit.", "ad.", "campaign.", "referral.", "visitor."];
-  const typingSpeed = 150; // milliseconds per character
-  const deletingSpeed = 100; // milliseconds per character
-  const pauseBeforeDeleting = 1500; // pause before starting to delete
+  const words = ["ad.", "campaign.", "referral.", "visitor."];
+  const typingSpeed = 90; // faster speed, was 150
+  const deletingSpeed = 60; // faster speed, was 100
+  const pauseBeforeDeleting = 1200; // pause before starting to delete
   
   // Handle cursor blinking
   useEffect(() => {
@@ -60,7 +60,8 @@ const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-0 items-center">
           <div className="space-y-8">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              <div className="whitespace-nowrap">Personalise your website.</div>
+              <div className="whitespace-nowrap">Personalise your</div>
+              <div className="whitespace-nowrap">website.</div>
               <div className="gradient-text inline-flex whitespace-nowrap">
                 For every {displayText}
                 <span className={`ml-0.5 ${cursorVisible ? 'opacity-100' : 'opacity-0'}`}>|</span>
