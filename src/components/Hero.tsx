@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
                     ↑
                   </div>
                   <span className="text-gray-800 font-semibold whitespace-nowrap">
-                    188% Conversion Lift
+                    21% Conversion Lift
                   </span>
                 </div>
               </div>

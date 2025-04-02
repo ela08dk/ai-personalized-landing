@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const DashboardPreview: React.FC = () => {
@@ -37,9 +36,7 @@ const DashboardPreview: React.FC = () => {
 
         <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-            <div className="text-4xl font-bold mb-2 text-craftera-dark">
-              2M
-            </div>
+            <div className="text-4xl font-bold mb-2 text-craftera-dark">2m</div>
             <div className="text-gray-500">Visitors Analyzed</div>
           </div>
 
