@@ -1,81 +1,21 @@
-
 import React, { useState, useEffect } from "react";
 import { Anchor, Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import VideoDialog from "./VideoDialog";
+import LandingPageEffect from "./LandingPageEffect";
 
 const Hero: React.FC = () => {
-  const [displayText, setDisplayText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [wordIndex, setWordIndex] = useState(0);
-  const [cursorVisible, setCursorVisible] = useState(true);
-  
-  const words = ["ad.", "campaign.", "referral.", "visitor."];
-  const typingSpeed = 90; // faster speed
-  const deletingSpeed = 60; // faster speed
-  const pauseBeforeDeleting = 1200; // pause before starting to delete
-  
-  // Handle cursor blinking
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setCursorVisible(prev => !prev);
-    }, 500);
-    
-    return () => clearInterval(cursorInterval);
-  }, []);
-  
-  // Handle typing effect
-  useEffect(() => {
-    let timeout: number;
-    
-    if (!isDeleting && displayText === words[wordIndex]) {
-      // Word is fully typed, wait before deleting
-      timeout = window.setTimeout(() => {
-        setIsDeleting(true);
-      }, pauseBeforeDeleting);
-    } else if (isDeleting && displayText === "") {
-      // Word is fully deleted, move to next word
-      setIsDeleting(false);
-      setWordIndex((prev) => (prev + 1) % words.length);
-    } else {
-      // Either typing or deleting
-      const speed = isDeleting ? deletingSpeed : typingSpeed;
-      timeout = window.setTimeout(() => {
-        if (!isDeleting) {
-          // Typing
-          setDisplayText(words[wordIndex].substring(0, displayText.length + 1));
-        } else {
-          // Deleting
-          setDisplayText(words[wordIndex].substring(0, displayText.length - 1));
-        }
-      }, speed);
-    }
-    
-    return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, wordIndex, words]);
-
-  // Console logs to help debug the typing effect
-  useEffect(() => {
-    console.log({
-      currentWord: words[wordIndex],
-      displayText,
-      isDeleting,
-      wordIndex
-    });
-  }, [displayText, isDeleting, wordIndex, words]);
-
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white to-craftera-blue/5 section-padding">
       <div className="max-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-0 items-center">
           <div className="space-y-8">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              <div className="whitespace-nowrap">Personalise your</div>
-              <div className="whitespace-nowrap">website.</div>
-              <div className="gradient-text inline-flex whitespace-nowrap">
-                For every {displayText}
-                <span className={`ml-0.5 ${cursorVisible ? 'opacity-100' : 'opacity-0'}`}>|</span>
-              </div>
+            <h1 className="text-4xl md:text-5xl xl:text-[56px] font-bold leading-tight">
+              Personalise your
+              <br />
+              website.
+              <br />
+              <LandingPageEffect />
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-xl">
               Our AI personalizes every website visit, creating unique
