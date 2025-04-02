@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
 
             <div className="relative w-full">
               {/* Referring page analytics overlay */}
-              <div className="absolute -top-10 -left-4 z-10 animate-float hidden sm:block">
+              <div className="absolute -top-10 -left-4 z-10 animate-float hidden md:block">
                 <div className="bg-white rounded-lg shadow-lg p-3 text-xs">
                   <div className="flex items-center gap-2 font-medium text-gray-800">
                     <div className="w-3 h-3 bg-craftera-purple rounded-full"></div>
@@ -93,10 +93,6 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Background elements */}
-      <div className="absolute top-40 left-10 w-64 h-64 bg-craftera-green/20 rounded-full blur-3xl animate-pulse-slow"></div>
-      <div className="absolute bottom-20 right-10 w-80 h-80 bg-craftera-purple/20 rounded-full blur-3xl animate-pulse-slow"></div>
     </section>
   );
 };
