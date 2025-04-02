@@ -5,27 +5,54 @@ import { Play } from "lucide-react";
 import VideoDialog from "./VideoDialog";
 
 const Hero: React.FC = () => {
-  const [textIndex, setTextIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const dynamicTexts = [
-    "For every visit.",
-    "For every ad.",
-    "For every campaign.",
-    "For every referral.",
-    "For every visitor."
-  ];
-
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [wordIndex, setWordIndex] = useState(0);
+  const [cursorVisible, setCursorVisible] = useState(true);
+  
+  const words = ["visit.", "ad.", "campaign.", "referral.", "visitor."];
+  const typingSpeed = 150; // milliseconds per character
+  const deletingSpeed = 100; // milliseconds per character
+  const pauseBeforeDeleting = 1500; // pause before starting to delete
+  
+  // Handle cursor blinking
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setTextIndex((prevIndex) => (prevIndex + 1) % dynamicTexts.length);
-        setIsAnimating(false);
-      }, 500); // Time for fade-out animation
-    }, 3000); // Change text every 3 seconds
-
-    return () => clearInterval(interval);
+    const cursorInterval = setInterval(() => {
+      setCursorVisible(prev => !prev);
+    }, 500);
+    
+    return () => clearInterval(cursorInterval);
   }, []);
+  
+  // Handle typing effect
+  useEffect(() => {
+    let timeout: number;
+    
+    if (!isDeleting && displayText === words[wordIndex]) {
+      // Word is fully typed, wait before deleting
+      timeout = window.setTimeout(() => {
+        setIsDeleting(true);
+      }, pauseBeforeDeleting);
+    } else if (isDeleting && displayText === "") {
+      // Word is fully deleted, move to next word
+      setIsDeleting(false);
+      setWordIndex((prev) => (prev + 1) % words.length);
+    } else {
+      // Either typing or deleting
+      const speed = isDeleting ? deletingSpeed : typingSpeed;
+      timeout = window.setTimeout(() => {
+        if (!isDeleting) {
+          // Typing
+          setDisplayText(words[wordIndex].substring(0, displayText.length + 1));
+        } else {
+          // Deleting
+          setDisplayText(words[wordIndex].substring(0, displayText.length - 1));
+        }
+      }, speed);
+    }
+    
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, wordIndex, words]);
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white to-craftera-blue/5 section-padding">
@@ -35,12 +62,9 @@ const Hero: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Personalise your website.
               <br />
-              <span 
-                className={`gradient-text transition-opacity duration-500 ${
-                  isAnimating ? "opacity-0" : "opacity-100"
-                }`}
-              >
-                {dynamicTexts[textIndex]}
+              <span className="gradient-text inline-flex">
+                For every {displayText}
+                <span className={`ml-0.5 ${cursorVisible ? 'opacity-100' : 'opacity-0'}`}>|</span>
               </span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-xl">
