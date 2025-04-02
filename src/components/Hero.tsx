@@ -11,8 +11,8 @@ const Hero: React.FC = () => {
   const [cursorVisible, setCursorVisible] = useState(true);
   
   const words = ["ad.", "campaign.", "referral.", "visitor."];
-  const typingSpeed = 90; // faster speed, was 150
-  const deletingSpeed = 60; // faster speed, was 100
+  const typingSpeed = 90; // faster speed
+  const deletingSpeed = 60; // faster speed
   const pauseBeforeDeleting = 1200; // pause before starting to delete
   
   // Handle cursor blinking
@@ -52,6 +52,16 @@ const Hero: React.FC = () => {
     }
     
     return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, wordIndex, words]);
+
+  // Console logs to help debug the typing effect
+  useEffect(() => {
+    console.log({
+      currentWord: words[wordIndex],
+      displayText,
+      isDeleting,
+      wordIndex
+    });
   }, [displayText, isDeleting, wordIndex, words]);
 
   return (
