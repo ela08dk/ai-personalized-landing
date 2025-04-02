@@ -19,7 +19,7 @@ const CallToAction: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Anchor
               className="bg-white hover:bg-gray-100 text-craftera-dark px-8 py-6 text-lg"
-              href="https://page-variants-ui-g1z04.kinsta.page/"
+              href="https://app.newmode.ai"
             >
               Get Started
             </Anchor>
