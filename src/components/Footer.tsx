@@ -1,6 +1,5 @@
 
 import React from "react";
-import { Linkedin } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
@@ -29,9 +28,8 @@ const Footer: React.FC = () => {
             </a>
             <a 
               href="https://www.linkedin.com/company/newmode-ai" 
-              className="text-gray-400 hover:text-gray-500 flex items-center gap-1"
+              className="text-gray-400 hover:text-gray-500"
             >
-              <Linkedin size={16} />
               LinkedIn
             </a>
           </div>
