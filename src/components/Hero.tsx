@@ -1,9 +1,32 @@
-import React from "react";
+
+import React, { useState, useEffect } from "react";
 import { Anchor, Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import VideoDialog from "./VideoDialog";
 
 const Hero: React.FC = () => {
+  const [textIndex, setTextIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const dynamicTexts = [
+    "For every visit.",
+    "For every ad.",
+    "For every campaign.",
+    "For every referral.",
+    "For every visitor."
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setTextIndex((prevIndex) => (prevIndex + 1) % dynamicTexts.length);
+        setIsAnimating(false);
+      }, 500); // Time for fade-out animation
+    }, 3000); // Change text every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white to-craftera-blue/5 section-padding">
       <div className="max-container">
@@ -12,7 +35,13 @@ const Hero: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Personalise your website.
               <br />
-              <span className="gradient-text">For every visit.</span>
+              <span 
+                className={`gradient-text transition-opacity duration-500 ${
+                  isAnimating ? "opacity-0" : "opacity-100"
+                }`}
+              >
+                {dynamicTexts[textIndex]}
+              </span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-xl">
               Our AI personalizes every website visit, creating unique
