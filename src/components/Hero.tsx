@@ -59,13 +59,12 @@ const Hero: React.FC = () => {
       <div className="max-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-0 items-center">
           <div className="space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Personalise your website.
-              <br />
-              <span className="gradient-text inline-flex">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+              <div className="whitespace-nowrap">Personalise your website.</div>
+              <div className="gradient-text inline-flex whitespace-nowrap">
                 For every {displayText}
                 <span className={`ml-0.5 ${cursorVisible ? 'opacity-100' : 'opacity-0'}`}>|</span>
-              </span>
+              </div>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-xl">
               Our AI personalizes every website visit, creating unique
