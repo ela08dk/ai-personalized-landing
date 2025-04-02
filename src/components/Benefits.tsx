@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
 
 const benefitsList = [
-  "Increase conversion rates by up to 30%",
+  "Increase conversion rates by up to 189%",
   "Create personalized experiences for every traffic source",
   "No need for manual A/B testing or copywriting",
   "Works 24/7 to continuously optimize your pages",
