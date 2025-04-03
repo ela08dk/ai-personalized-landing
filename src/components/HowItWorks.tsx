@@ -1,12 +1,22 @@
 import React from "react";
 
-const steps = [
+interface Step {
+  number: string;
+  title: string;
+  description: string;
+  image: string | null;
+  video: string | null;
+  id: string;
+}
+
+const steps: Step[] = [
   {
     number: "01",
     title: "Connect Your Accounts",
     description:
       "Link your Google Analytics and Google Ads accounts to import your traffic and campaign data.",
-    image: "image.png",
+    image: "integrations.png",
+    video: null,
     id: "how-it-works-connect-accounts",
   },
   {
@@ -14,7 +24,8 @@ const steps = [
     title: "Import & Analyze Data",
     description:
       "Our AI analyzes your traffic sources and visitor behavior to identify optimization opportunities.",
-    image: "2.gif",
+    image: null,
+    video: "creation-output",
     id: "how-it-works-analyze-data",
   },
   {
@@ -22,7 +33,8 @@ const steps = [
     title: "AI Generates Personalized Pages",
     description:
       "Based on the analysis, the AI creates custom landing pages for each traffic source.",
-    image: "3.gif",
+    image: null,
+    video: "preview-output",
     id: "how-it-works-generate-pages",
   },
   {
@@ -30,7 +42,8 @@ const steps = [
     title: "Continuous Optimization",
     description:
       "The AI runs thousands of A/B tests to refine and improve each landing page over time.",
-    image: "improvement2.gif",
+    image: null,
+    video: "fast-forward-output",
     id: "how-it-works-optimization",
   },
 ];
@@ -74,11 +87,34 @@ const HowItWorks: React.FC = () => {
 
               <div className="w-full md:w-1/2">
                 <div className="relative bg-white shadow-lg rounded-xl border border-gray-100 p-4 overflow-hidden">
-                  <img
-                    src={step.image}
-                    alt={step.title}
-                    className="w-full h-auto rounded-lg"
-                  />
+                  {step.image && (
+                    <img
+                      src={step.image}
+                      alt={step.title}
+                      className="w-full h-auto rounded-lg"
+                    />
+                  )}
+
+                  {step.video && (
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      // style={{ transform: "scale(1.08)" }}
+                      className="aspect-video"
+                    >
+                      <source
+                        src={step.video + ".mp4"}
+                        type="video/mp4"
+                      ></source>
+                      <source
+                        src={step.video + ".webm"}
+                        type="video/webm"
+                      ></source>
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
                 </div>
               </div>
             </div>
