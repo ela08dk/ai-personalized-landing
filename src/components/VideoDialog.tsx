@@ -14,7 +14,7 @@ const VideoDialog: React.FC<VideoDialogProps> = ({ children }) => {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/GseSfwi-uC8"
+            src="https://www.youtube.com/embed/r4jNCDa4zRg"
             title="newmode Demo Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
