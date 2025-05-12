@@ -52,8 +52,8 @@
   maxHideDurationMs 
 ) {
   console.log("Starting anti-flicker!", new Date())
-  /* Hide immediately */
   
+  /* Hide immediately */
   rootEl.classList.add(hideClass);
   
   /* Reveal helper (idempotent) */
@@ -62,6 +62,7 @@
     if (revealed) return;
     rootEl.classList.remove(hideClass);
     revealed = true;
+    console.log("Hiding!", new Date())
   }
   window.newmode = {
     orgId: "org_2wXeHTES1WNSXDtWR8UJwwwOLTO",
