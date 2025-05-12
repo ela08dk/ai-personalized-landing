@@ -43,37 +43,7 @@
   </script>
 
 <style>.nm-async-hide {opacity: 0 !important;}</style>
-
-<script>
-  (function (
-  win, 
-  rootEl, 
-  hideClass,
-  maxHideDurationMs 
-) {
-  console.log("Starting anti-flicker!", new Date().toISOString())
-  
-  /* Hide immediately */
-  rootEl.classList.add(hideClass);
-  
-  /* Reveal helper (idempotent) */
-  let revealed = false;
-  function unhide() {
-    if (revealed) return;
-    rootEl.classList.remove(hideClass);
-    revealed = true;
-    console.log("Hiding!", new Date().toISOString())
-  }
-  window.newmode = {
-    orgId: "org_2wXeHTES1WNSXDtWR8UJwwwOLTO",
-    isContentRevealed: () => revealed,
-    onContentReplacement: () => unhide()
-  };
-
-  /* Fallback reveal after timeout */
-  setTimeout(unhide, maxHideDurationMs);
-})(window, document.documentElement, "nm-async-hide", 2000);
-</script>
+<script>!function(e,n,t){n.classList.add(t);let o=!1;function d(){o||(n.classList.remove(t),o=!0)}window.newmode={orgId:"org_2wXeHTES1WNSXDtWR8UJwwwOLTO",isContentRevealed:()=>o,onContentReplacement:()=>d()},setTimeout(d,2e3)}(window,document.documentElement,"nm-async-hide");</script> 
 <script src="https://cdn.newmode.ai/pixel.js"></script>
     
 </head>
