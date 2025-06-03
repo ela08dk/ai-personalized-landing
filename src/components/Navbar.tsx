@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
           </VideoDialog>
           <Anchor
             className="bg-craftera-dark hover:bg-black text-white"
-            href="https://app.newmode.ai"
+            href="https://dash.newmode.ai"
           >
             Get Started
           </Anchor>

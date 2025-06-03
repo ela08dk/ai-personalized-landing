@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Anchor
                 className="bg-craftera-dark hover:bg-black text-white px-8 py-6 text-lg"
-                href="https://app.newmode.ai"
+                href="https://dash.newmode.ai"
               >
                 Get Started
               </Anchor>
