@@ -26,9 +26,9 @@ export function Bookmarklet() {
           <a
             href={bookmarklet}
             draggable
-            className="flex h-10 items-center select-none rounded-lg bg-gradient-to-br from-indigo-500/75 to-purple-400/80 px-4 py-2 font-medium text-white transition-transform text-sm"
+            className="flex h-10 items-center select-none rounded-lg bg-gradient-to-br from-indigo-500/75 to-purple-400/80 px-4 py-2 font-medium text-white transition-transform text-sm whitespace-nowrap"
           >
-            Studio 🚀
+            <span className="hidden md:inline">Studio </span>🚀
           </a>
         </TooltipTrigger>
         <TooltipContent>

@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
           </a>
         </nav>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-2 md:gap-6">
           <VideoDialog>
             <button className="hidden md:inline-flex text-gray-700 hover:text-gray-900">
               Watch Demo
