@@ -32,10 +32,10 @@ export function Bookmarklet() {
           </a>
         </TooltipTrigger>
         <TooltipContent>
-          <div className="max-w-[288px] space-y-2 px-2 py-3">
+          <div className="max-w-[280px] space-y-2 px-2 py-3">
             <div className="flex items-start gap-2">
               <p className="text-sm">
-                Click me to start Studio on this website...
+                Click me to start Studio on this website
               </p>
             </div>
 
