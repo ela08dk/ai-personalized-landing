@@ -74,9 +74,15 @@ function getUserId() {
 }
 
 function identify(userId: string) {
-  (
+  const posthog = (
     window as { posthog?: { identify: (userId: string) => void } }
-  ).posthog?.identify(userId);
+  ).posthog;
+
+  if (posthog) {
+    posthog.identify(userId);
+  } else {
+    console.warn("PostHog not found, cannot identify user");
+  }
 }
 
 function makeBookmarklet(code: string) {
