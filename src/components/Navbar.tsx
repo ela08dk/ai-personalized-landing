@@ -1,6 +1,8 @@
 import React from "react";
 import { Anchor, Button } from "@/components/ui/button";
 import VideoDialog from "./VideoDialog";
+import { Bookmarklet } from "./Bookmarklet";
+import { useSearchParams } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   return (
@@ -50,10 +52,22 @@ const Navbar: React.FC = () => {
           >
             Get Started
           </Anchor>
+
+          <StudioButton />
         </div>
       </div>
     </header>
   );
 };
+
+function StudioButton() {
+  const [searchParams] = useSearchParams();
+
+  if (searchParams.has("playground")) {
+    return <Bookmarklet />;
+  }
+
+  return null;
+}
 
 export default Navbar;
