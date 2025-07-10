@@ -23,6 +23,12 @@ const Footer: React.FC = () => {
             © {new Date().getFullYear()} newmode. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0 md:ml-6">
+            <a href="/terms" className="text-gray-400 hover:text-gray-500">
+              Terms of Service
+            </a>
+            <a href="/privacy" className="text-gray-400 hover:text-gray-500">
+              Privacy Policy
+            </a>
             <a href="https://twitter.com/newmode_ai" className="text-gray-400 hover:text-gray-500">
               Twitter
             </a>
