@@ -29,6 +29,8 @@ const App = () => (
             })
           );
         }
+        // @ts-expect-error posthog is not typed
+        window.posthog = posthog;
       },
     }}
   >
