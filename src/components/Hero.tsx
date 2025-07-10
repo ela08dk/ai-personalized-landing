@@ -3,8 +3,10 @@ import { Anchor, Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import VideoDialog from "./VideoDialog";
 import LandingPageEffect from "./LandingPageEffect";
+import { useDashLink } from "../hooks/use-dash-link";
 
 const Hero: React.FC = () => {
+  const dashLink = useDashLink();
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white to-craftera-blue/5 section-padding">
       <div className="max-container">
@@ -25,7 +27,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Anchor
                 className="bg-craftera-dark hover:bg-black text-white px-8 py-6 text-lg"
-                href="https://dash.newmode.ai"
+                href={dashLink}
               >
                 Get Started
               </Anchor>

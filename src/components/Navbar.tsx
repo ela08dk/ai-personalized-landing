@@ -3,8 +3,10 @@ import { Anchor, Button } from "@/components/ui/button";
 import VideoDialog from "./VideoDialog";
 import { Bookmarklet } from "./Bookmarklet";
 import { useSearchParams } from "react-router-dom";
+import { useDashLink } from "../hooks/use-dash-link";
 
 const Navbar: React.FC = () => {
+  const dashLink = useDashLink();
   return (
     <header className="w-full py-4 px-4 sm:px-6 lg:px-8 border-b border-gray-100 sticky top-0 left-0 z-30 bg-white">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
@@ -48,7 +50,7 @@ const Navbar: React.FC = () => {
           </VideoDialog>
           <Anchor
             className="bg-craftera-dark hover:bg-black text-white"
-            href="https://dash.newmode.ai"
+            href={dashLink}
           >
             Get Started
           </Anchor>

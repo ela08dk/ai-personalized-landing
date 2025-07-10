@@ -2,8 +2,10 @@ import React from "react";
 import { Anchor, Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import VideoDialog from "./VideoDialog";
+import { useDashLink } from "../hooks/use-dash-link";
 
 const CallToAction: React.FC = () => {
+  const dashLink = useDashLink();
   return (
     <section id="demo" className="section-padding bg-craftera-dark text-white">
       <div className="max-container">
@@ -19,7 +21,7 @@ const CallToAction: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Anchor
               className="bg-white hover:bg-gray-100 text-craftera-dark px-8 py-6 text-lg"
-              href="https://dash.newmode.ai"
+              href={dashLink}
             >
               Get Started
             </Anchor>
