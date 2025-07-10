@@ -1,3 +1,4 @@
+import { PostHog, usePostHog } from "posthog-js/react";
 import {
   Tooltip,
   TooltipContent,
@@ -5,7 +6,7 @@ import {
   TooltipTrigger,
 } from "./ui/tooltip";
 
-const BOOKMARKLET_WITH_USER_ID = `
+const BOOKMARKLET = `
 window.newmode = { ...(window.newmode || {}), studio: { playground: true, userId: "<user_id>" } }
 const script = document.createElement("script");
 script.type = "module";
@@ -14,24 +15,11 @@ script.crossOrigin = "anonymous";
 document.head.appendChild(script);
 `;
 
-const BOOKMARKLET_WITHOUT_USER_ID = `
-window.newmode = { ...(window.newmode || {}), studio: { playground: true } }
-const script = document.createElement("script");
-script.type = "module";
-script.src = "https://cdn.newmode.ai/studio.js";
-script.crossOrigin = "anonymous";
-document.head.appendChild(script);
-`;
-
-const userId = getUserId();
-
-const bookmarklet = makeBookmarklet(
-  userId
-    ? BOOKMARKLET_WITH_USER_ID.replace("<user_id>", userId)
-    : BOOKMARKLET_WITHOUT_USER_ID
-);
-
 export function Bookmarklet() {
+  const posthog = usePostHog();
+  const userId = getUserId(posthog);
+  const bookmarklet = makeBookmarklet(BOOKMARKLET.replace("<user_id>", userId));
+
   return (
     <TooltipProvider>
       <Tooltip delayDuration={0}>
@@ -71,18 +59,10 @@ export function Bookmarklet() {
   );
 }
 
-function getUserId() {
+function getUserId(posthog: PostHog) {
   const userId = localStorage.getItem("nm-user-id");
 
   if (!userId) {
-    const posthog = (window as { posthog?: { get_distinct_id: () => string } })
-      .posthog;
-
-    if (!posthog) {
-      console.warn("PostHog not found, cannot identify user");
-      return null;
-    }
-
     const newUserId = posthog.get_distinct_id();
 
     localStorage.setItem("nm-user-id", newUserId);
