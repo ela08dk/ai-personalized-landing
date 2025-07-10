@@ -27,15 +27,6 @@ export function Bookmarklet() {
       : BOOKMARKLET.replace("<config>", "{ playground: true }")
   );
 
-  console.log(
-    userId
-      ? BOOKMARKLET.replace(
-          "<config>",
-          `{ playground: true, userId: "${userId}" }`
-        )
-      : BOOKMARKLET.replace("<config>", "{ playground: true }")
-  );
-
   return (
     <TooltipProvider>
       <Tooltip delayDuration={0}>
