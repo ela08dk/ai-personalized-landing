@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { PostHogProvider } from "posthog-js/react";
+import { LOCAL_STORAGE_EVENT } from "./hooks/use-user-id";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,17 @@ const App = () => (
       person_profiles: "always",
       session_recording: { maskAllInputs: false },
       api_host: "https://eu.i.posthog.com",
+      loaded: (posthog) => {
+        const userId = posthog.get_distinct_id();
+        if (userId) {
+          localStorage.setItem("nm-uid", userId);
+          window.dispatchEvent(
+            new CustomEvent(LOCAL_STORAGE_EVENT, {
+              detail: { key: "nm-uid", value: userId },
+            })
+          );
+        }
+      },
     }}
   >
     <QueryClientProvider client={queryClient}>

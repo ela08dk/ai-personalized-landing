@@ -5,9 +5,10 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
+import { useUserId } from "../hooks/use-user-id";
 
 const BOOKMARKLET = `
-window.newmode = { ...(window.newmode || {}), studio: { playground: true, userId: "<user_id>" } }
+window.newmode = { ...(window.newmode || {}), studio: <config> }
 const script = document.createElement("script");
 script.type = "module";
 script.src = "https://cdn.newmode.ai/studio.js";
@@ -16,9 +17,24 @@ document.head.appendChild(script);
 `;
 
 export function Bookmarklet() {
-  const posthog = usePostHog();
-  const userId = getUserId(posthog);
-  const bookmarklet = makeBookmarklet(BOOKMARKLET.replace("<user_id>", userId));
+  const userId = useUserId("nm-uid");
+  const bookmarklet = makeBookmarklet(
+    userId
+      ? BOOKMARKLET.replace(
+          "<config>",
+          `{ playground: true, userId: "${userId}" }`
+        )
+      : BOOKMARKLET.replace("<config>", "{ playground: true }")
+  );
+
+  console.log(
+    userId
+      ? BOOKMARKLET.replace(
+          "<config>",
+          `{ playground: true, userId: "${userId}" }`
+        )
+      : BOOKMARKLET.replace("<config>", "{ playground: true }")
+  );
 
   return (
     <TooltipProvider>
@@ -57,20 +73,6 @@ export function Bookmarklet() {
       </Tooltip>
     </TooltipProvider>
   );
-}
-
-function getUserId(posthog: PostHog) {
-  const userId = localStorage.getItem("nm-user-id");
-
-  if (!userId) {
-    const newUserId = posthog.get_distinct_id();
-
-    localStorage.setItem("nm-user-id", newUserId);
-
-    return newUserId;
-  }
-
-  return userId;
 }
 
 function makeBookmarklet(code: string) {
