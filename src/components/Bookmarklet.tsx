@@ -1,11 +1,11 @@
 import {
   Tooltip,
   TooltipContent,
-  TooltipTrigger,
   TooltipProvider,
+  TooltipTrigger,
 } from "./ui/tooltip";
 
-const BOOKMARKLET = `
+const BOOKMARKLET_WITH_USER_ID = `
 window.newmode = { ...(window.newmode || {}), studio: { playground: true, userId: "<user_id>" } }
 const script = document.createElement("script");
 script.type = "module";
@@ -14,8 +14,21 @@ script.crossOrigin = "anonymous";
 document.head.appendChild(script);
 `;
 
+const BOOKMARKLET_WITHOUT_USER_ID = `
+window.newmode = { ...(window.newmode || {}), studio: { playground: true } }
+const script = document.createElement("script");
+script.type = "module";
+script.src = "https://cdn.newmode.ai/studio.js";
+script.crossOrigin = "anonymous";
+document.head.appendChild(script);
+`;
+
+const userId = getUserId();
+
 const bookmarklet = makeBookmarklet(
-  BOOKMARKLET.replace("<user_id>", getUserId()).trim()
+  userId
+    ? BOOKMARKLET_WITH_USER_ID.replace("<user_id>", userId)
+    : BOOKMARKLET_WITHOUT_USER_ID
 );
 
 export function Bookmarklet() {
@@ -62,27 +75,22 @@ function getUserId() {
   const userId = localStorage.getItem("nm-user-id");
 
   if (!userId) {
-    const newUserId = crypto.randomUUID();
+    const posthog = (window as { posthog?: { get_distinct_id: () => string } })
+      .posthog;
+
+    if (!posthog) {
+      console.warn("PostHog not found, cannot identify user");
+      return null;
+    }
+
+    const newUserId = posthog.get_distinct_id();
+
     localStorage.setItem("nm-user-id", newUserId);
 
-    identify(newUserId);
     return newUserId;
   }
 
-  identify(userId);
   return userId;
-}
-
-function identify(userId: string) {
-  const posthog = (
-    window as { posthog?: { identify: (userId: string) => void } }
-  ).posthog;
-
-  if (posthog) {
-    posthog.identify(userId);
-  } else {
-    console.warn("PostHog not found, cannot identify user");
-  }
 }
 
 function makeBookmarklet(code: string) {
