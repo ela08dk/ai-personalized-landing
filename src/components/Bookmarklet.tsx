@@ -1,31 +1,13 @@
-import { PostHog, usePostHog } from "posthog-js/react";
+import { useStudioBookmarklet } from "@/hooks/use-bookmarklet";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
-import { useUserId } from "../hooks/use-user-id";
-
-const BOOKMARKLET = `
-window.newmode = { ...(window.newmode || {}), studio: <config> }
-const script = document.createElement("script");
-script.type = "module";
-script.src = "https://cdn.newmode.ai/studio.js";
-script.crossOrigin = "anonymous";
-document.head.appendChild(script);
-`;
 
 export function Bookmarklet() {
-  const userId = useUserId("nm-uid");
-  const bookmarklet = makeBookmarklet(
-    userId
-      ? BOOKMARKLET.replace(
-          "<config>",
-          `{ playground: true, userId: "${userId}" }`
-        )
-      : BOOKMARKLET.replace("<config>", "{ playground: true }")
-  );
+  const bookmarklet = useStudioBookmarklet();
 
   return (
     <TooltipProvider>
@@ -64,9 +46,4 @@ export function Bookmarklet() {
       </Tooltip>
     </TooltipProvider>
   );
-}
-
-function makeBookmarklet(code: string) {
-  const func = `(function(){${encodeURIComponent(code)}})();`;
-  return `javascript:${func}`;
 }

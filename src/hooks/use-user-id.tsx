@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 
 export const LOCAL_STORAGE_EVENT = "nm-uid-set";
+export const LOCAL_STORAGE_KEY = "nm-uid";
 
-export function useUserId(key: string) {
+export function useUserId() {
   const [value, setValue] = useState(() => {
-    return localStorage.getItem(key);
+    return localStorage.getItem(LOCAL_STORAGE_KEY);
   });
 
   useEffect(() => {
     function handleUserIdSet(e: CustomEvent) {
-      if (e.detail.key === key) {
+      if (e.detail.key === LOCAL_STORAGE_KEY) {
         setValue(e.detail.value);
       }
     }
@@ -25,7 +26,7 @@ export function useUserId(key: string) {
         handleUserIdSet as EventListener
       );
     };
-  }, [key]);
+  }, []);
 
   return value;
 }
