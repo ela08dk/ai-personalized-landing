@@ -4,6 +4,8 @@ import VideoDialog from "./VideoDialog";
 import { Bookmarklet } from "./Bookmarklet";
 import { useSearchParams } from "react-router-dom";
 import { useDashLink } from "../hooks/use-dash-link";
+import { GetStartedButton } from "./cta/GetStartedButton";
+import { PlaygroundButton } from "./cta/PlaygroundButton";
 
 const Navbar: React.FC = () => {
   const dashLink = useDashLink();
@@ -42,34 +44,13 @@ const Navbar: React.FC = () => {
           </a>
         </nav>
 
-        <div className="flex items-center gap-2 md:gap-6">
-          <VideoDialog>
-            <button className="hidden md:inline-flex text-gray-700 hover:text-gray-900">
-              Watch Demo
-            </button>
-          </VideoDialog>
-          <Anchor
-            className="bg-craftera-dark hover:bg-black text-white"
-            href={dashLink}
-          >
-            Get Started
-          </Anchor>
-
-          <StudioButton />
+        <div className="flex items-center gap-2 md:gap-4">
+          <GetStartedButton size="sm" variant="ghost" />
+          <PlaygroundButton size="sm" />
         </div>
       </div>
     </header>
   );
 };
-
-function StudioButton() {
-  const [searchParams] = useSearchParams();
-
-  if (searchParams.has("playground")) {
-    return <Bookmarklet />;
-  }
-
-  return null;
-}
 
 export default Navbar;

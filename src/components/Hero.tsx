@@ -4,6 +4,8 @@ import { Play } from "lucide-react";
 import VideoDialog from "./VideoDialog";
 import LandingPageEffect from "./LandingPageEffect";
 import { useDashLink } from "../hooks/use-dash-link";
+import { PlaygroundButton } from "./cta/PlaygroundButton";
+import { GetStartedButton } from "./cta/GetStartedButton";
 
 const Hero: React.FC = () => {
   const dashLink = useDashLink();
@@ -25,21 +27,8 @@ const Hero: React.FC = () => {
               rates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Anchor
-                className="bg-craftera-dark hover:bg-black text-white px-8 py-6 text-lg"
-                href={dashLink}
-              >
-                Get Started
-              </Anchor>
-              <VideoDialog>
-                <Button
-                  variant="outline"
-                  className="border-craftera-dark/25 text-craftera-dark hover:bg-craftera-dark/5 px-8 py-6 text-lg"
-                >
-                  <Play size={18} className="mr-2" />
-                  Watch Demo
-                </Button>
-              </VideoDialog>
+              <PlaygroundButton />
+              <GetStartedButton />
             </div>
           </div>
 

@@ -3,6 +3,8 @@ import { Anchor, Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import VideoDialog from "./VideoDialog";
 import { useDashLink } from "../hooks/use-dash-link";
+import { GetStartedButton } from "./cta/GetStartedButton";
+import { PlaygroundButton } from "./cta/PlaygroundButton";
 
 const CallToAction: React.FC = () => {
   const dashLink = useDashLink();
@@ -19,21 +21,8 @@ const CallToAction: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Anchor
-              className="bg-white hover:bg-gray-100 text-craftera-dark px-8 py-6 text-lg"
-              href={dashLink}
-            >
-              Get Started
-            </Anchor>
-            <VideoDialog>
-              <Button
-                variant="outline"
-                className="border-white text-black bg-white hover:bg-white/90 px-8 py-6 text-lg"
-              >
-                <Play size={18} className="mr-2" />
-                Watch Demo
-              </Button>
-            </VideoDialog>
+            <PlaygroundButton variant="secondary" />
+            <GetStartedButton variant="secondary" />
           </div>
         </div>
       </div>
