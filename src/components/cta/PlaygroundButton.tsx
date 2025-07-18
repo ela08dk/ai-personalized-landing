@@ -1,4 +1,4 @@
-import { useStudioBookmarklet } from "@/hooks/use-bookmarklet";
+import { useUserId } from "@/hooks/use-user-id";
 import { Anchor } from "../ui/button";
 import { Rocket } from "lucide-react";
 import { CtaAnchor } from "./CtaAnchor";
@@ -10,10 +10,11 @@ export function PlaygroundButton({
   size?: "sm" | "md";
   variant?: "primary" | "secondary";
 }) {
-  const bookmarklet = useStudioBookmarklet();
+  const userId = useUserId();
+  const playgroundUrl = `https://algomo-fintech.webflow.io/${userId ? `?playground_user=${userId}` : ""}`;
 
   return (
-    <CtaAnchor size={size} variant={variant} href={bookmarklet}>
+    <CtaAnchor size={size} variant={variant} href={playgroundUrl}>
       Try Playground
       <Rocket className="ml-1" />
     </CtaAnchor>
