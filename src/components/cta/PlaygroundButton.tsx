@@ -39,13 +39,14 @@ export function PlaygroundButton({
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button
+          size={size}
           className={cn(
             variant === "primary" &&
               "bg-craftera-dark hover:bg-black border border-craftera-dark hover:border-black text-white px-8 py-6 text-lg",
             variant === "secondary" &&
               "border-craftera-dark/25 text-craftera-dark bg-white hover:bg-gray-50 border px-8 py-6 text-lg",
-            size === "sm" && "text-sm px-4 py-2 font-medium",
-            size === "md" && "text-[18px] px-8 py-6"
+            // size === "sm" && "text-sm px-4 py-2 font-medium",
+            // size === "md" && "text-[18px] px-8 py-6"
           )}
         >
           Try Playground
@@ -60,7 +61,7 @@ export function PlaygroundButton({
           <p className="text-sm text-muted-foreground">
             Pick a website below and use our AI editor to quickly create a personalized experience
           </p>
-          <div className="flex flex-col md:flex-row gap-3 justify-center">
+          <div className="flex flex-col md:flex-row gap-3 justify-between">
             <button
               onClick={handleThisWebsite}
               className="p-2 flex h-16 items-center justify-center rounded-lg border-2 border-border bg-background hover:bg-muted/50 transition-colors"
