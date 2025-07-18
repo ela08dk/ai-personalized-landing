@@ -14,7 +14,7 @@ export function PlaygroundButton({
   const playgroundUrl = `https://algomo-fintech.webflow.io/${userId ? `?playground_user=${userId}` : ""}`;
 
   return (
-    <CtaAnchor size={size} variant={variant} href={playgroundUrl}>
+    <CtaAnchor size={size} variant={variant} href={playgroundUrl} target="_blank" rel="noopener noreferrer">
       Try Playground
       <Rocket className="ml-1" />
     </CtaAnchor>
