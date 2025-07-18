@@ -39,14 +39,13 @@ export function PlaygroundButton({
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button
-          size={size}
           className={cn(
             variant === "primary" &&
               "bg-craftera-dark hover:bg-black border border-craftera-dark hover:border-black text-white px-8 py-6 text-lg",
             variant === "secondary" &&
               "border-craftera-dark/25 text-craftera-dark bg-white hover:bg-gray-50 border px-8 py-6 text-lg",
-            // size === "sm" && "text-sm px-4 py-2 font-medium",
-            // size === "md" && "text-[18px] px-8 py-6"
+            size === "sm" && "text-sm px-4 py-2 font-medium",
+            size === "md" && "text-[18px] px-8 py-6"
           )}
         >
           Try Playground
