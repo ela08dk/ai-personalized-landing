@@ -60,16 +60,16 @@ export function PlaygroundButton({
           <p className="text-sm text-muted-foreground">
             Pick a website below and use our AI editor to quickly create a personalized experience
           </p>
-          <div className="flex flex-col md:flex-row gap-3">
+          <div className="flex flex-col md:flex-row gap-3 justify-between">
             <button
               onClick={handleThisWebsite}
-              className="flex h-16 items-center justify-center rounded-lg border-2 border-border bg-background hover:bg-muted/50 transition-colors"
+              className="p-2 flex h-16 items-center justify-center rounded-lg border-2 border-border bg-background hover:bg-muted/50 transition-colors"
             >
               <span className="font-medium">This website</span>
             </button>
             <button
               onClick={handleFintechDemo}
-              className="flex h-16 items-center justify-center rounded-lg border-2 border-border bg-background hover:bg-muted/50 transition-colors"
+              className="p-2 flex h-16 items-center justify-center rounded-lg border-2 border-border bg-background hover:bg-muted/50 transition-colors"
             >
               <span className="font-medium">Fintech demo</span>
             </button>
