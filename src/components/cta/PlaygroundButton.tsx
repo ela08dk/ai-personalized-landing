@@ -1,8 +1,10 @@
+
 import { useState } from "react";
 import { useUserId } from "@/hooks/use-user-id";
 import { useStudioBookmarklet } from "@/hooks/use-bookmarklet";
 import { Rocket } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -36,9 +38,8 @@ export function PlaygroundButton({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <button
+        <Button
           className={cn(
-            "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
             variant === "primary" &&
               "bg-craftera-dark hover:bg-black border border-craftera-dark hover:border-black text-white px-8 py-6 text-lg",
             variant === "secondary" &&
@@ -49,7 +50,7 @@ export function PlaygroundButton({
         >
           Try Playground
           <Rocket className="ml-1" />
-        </button>
+        </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
