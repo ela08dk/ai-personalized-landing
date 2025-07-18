@@ -5,10 +5,12 @@ import { Anchor } from "../ui/button";
 export function CtaAnchor({
   size = "md",
   variant = "primary",
+  className,
   ...props
 }: ComponentProps<"a"> & {
   size?: "sm" | "md";
   variant?: "primary" | "secondary" | "ghost";
+  className?: string;
 }) {
   return (
     <Anchor
@@ -20,7 +22,8 @@ export function CtaAnchor({
         variant === "ghost" &&
           "text-craftera-dark bg-transparent hover:text-black hover:bg-transparent",
         size === "sm" && "text-sm px-4 py-2 font-medium",
-        size === "md" && "text-[18px] px-8 py-6"
+        size === "md" && "text-[18px] px-8 py-6",
+        className
       )}
       {...props}
     />

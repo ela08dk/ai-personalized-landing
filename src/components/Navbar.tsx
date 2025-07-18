@@ -45,7 +45,11 @@ const Navbar: React.FC = () => {
         </nav>
 
         <div className="flex items-center gap-2 md:gap-4">
-          <GetStartedButton size="sm" variant="ghost" />
+          <GetStartedButton
+            size="sm"
+            variant="ghost"
+            className="hidden lg:block"
+          />
           <PlaygroundButton size="sm" />
         </div>
       </div>
