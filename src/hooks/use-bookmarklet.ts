@@ -2,11 +2,25 @@ import { useMemo } from "react";
 import { useUserId } from "./use-user-id";
 
 const BOOKMARKLET = `
-window.newmode = { ...(window.newmode || {}), studio: <config> }
+const STUDIO_URL = "https://cdn.newmode.ai/studio.js"; 
+
+window.newmode = { ...(window.newmode || {}), studio: <config> };
 const script = document.createElement("script");
 script.type = "module";
-script.src = "https://cdn.newmode.ai/studio.js";
+script.src = STUDIO_URL;
 script.crossOrigin = "anonymous";
+
+const ERROR_MESSAGE = "Sorry, we couldn't launch Studio.\\n\\nThis website has security policy that is preventing the editor from launching.\\n\\nIf you are the owner of this website, please contact us at hello@newmode.ai."
+
+function handleCSPViolation(error) {
+  if (error.blockedURI === STUDIO_URL) {
+    alert(ERROR_MESSAGE);
+    document.removeEventListener("securitypolicyviolation", handleCSPViolation);
+  }
+}
+
+document.addEventListener("securitypolicyviolation", handleCSPViolation);
+
 document.head.appendChild(script);
 `;
 
