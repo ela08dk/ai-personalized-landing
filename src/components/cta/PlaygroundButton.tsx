@@ -58,7 +58,9 @@ export function PlaygroundButton({
         </DialogHeader>
         <div className="space-y-4">
           <p className="text-sm text-muted-foreground">
-            We'll show you how to build a personalized website experience using our AI editor. Pick a website to get started!
+            We'll show you how to build a personalized website experience using our AI editor.
+            <br />
+            Pick a website to get started!
           </p>
           <div className="flex flex-col md:flex-row gap-3 justfy-stretch md:justify-center">
             <Button
