@@ -48,17 +48,17 @@ export function PlaygroundButton({
             size === "md" && "text-[18px] px-8 py-6"
           )}
         >
-          Try Playground
+          Try Demo
           <Rocket className="ml-1" />
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-xl font-semibold">Try the Playground</DialogTitle>
+          <DialogTitle className="text-xl font-semibold">Try our Studio demo</DialogTitle>
         </DialogHeader>
         <div className="space-y-4">
           <p className="text-sm text-muted-foreground">
-            Pick a website below and use our AI editor to quickly create a personalized experience
+            We'll show you how to build a personalized website experience using our AI editor. Pick a website to get started!
           </p>
           <div className="flex flex-col md:flex-row gap-3 justfy-stretch md:justify-center">
             <Button
