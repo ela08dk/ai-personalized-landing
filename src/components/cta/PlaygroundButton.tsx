@@ -54,11 +54,11 @@ export function PlaygroundButton({
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-xl font-semibold">Try our Studio demo</DialogTitle>
+          <DialogTitle className="text-xl font-semibold">Try our demo</DialogTitle>
         </DialogHeader>
         <div className="space-y-4">
           <p className="text-sm text-muted-foreground">
-            We'll show you how to build a personalized website experience using our AI editor.
+            We'll show you how to build a personalized website experience using our AI Studio.
           </p>
           <p className="text-sm text-muted-foreground">
             Pick a website to get started!
