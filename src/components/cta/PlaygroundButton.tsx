@@ -54,7 +54,7 @@ export function PlaygroundButton({
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-xl font-semibold">Try our demo</DialogTitle>
+          <DialogTitle className="text-xl font-semibold">Wow your visitors</DialogTitle>
         </DialogHeader>
         <div className="space-y-4">
           <p className="text-sm text-muted-foreground">
