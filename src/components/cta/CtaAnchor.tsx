@@ -21,7 +21,7 @@ export function CtaAnchor({
           "border-craftera-dark/25 text-craftera-dark bg-white hover:bg-gray-50 border px-8 py-6 text-lg",
         variant === "ghost" &&
           "text-craftera-dark bg-transparent hover:text-black hover:bg-transparent",
-        size === "sm" && "text-sm px-4 py-2 font-medium",
+        size === "sm" && "text-sm px-4 py-2.5 font-medium",
         size === "md" && "text-[18px] px-8 py-6",
         className
       )}
