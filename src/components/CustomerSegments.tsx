@@ -51,7 +51,7 @@ const CustomerSegments = () => {
       value: "+26%"
     }]
   }];
-  return <section className="py-16 bg-muted/40">
+  return <section className="py-16" style={{ backgroundColor: '#FBFBFC' }}>
       <div className="max-container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
