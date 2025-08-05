@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { useParams, Navigate } from "react-router-dom";
+import { useStudioBookmarklet } from "@/hooks/use-bookmarklet";
 
 const Demo = () => {
   const { demoUrl } = useParams<{ demoUrl: string }>();
+  const bookmarkletUrl = useStudioBookmarklet();
 
   const allowedDemoUrls = [
     "brex.com",
@@ -42,6 +44,9 @@ const Demo = () => {
         className="w-full h-screen border-0"
         title={`Demo for ${demoUrl}`}
         sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+        onLoad={() => {
+          window.location.href = bookmarkletUrl;
+        }}
       />
     </div>
   );
