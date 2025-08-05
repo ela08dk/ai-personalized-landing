@@ -6,6 +6,7 @@ import CompanyLogos from "@/components/CompanyLogos";
 import Features from "@/components/Features";
 import DashboardPreview from "@/components/DashboardPreview";
 import HowItWorks from "@/components/HowItWorks";
+import CustomerSegments from "@/components/CustomerSegments";
 import Benefits from "@/components/Benefits";
 import CallToAction from "@/components/CallToAction";
 import FAQ from "@/components/FAQ";
@@ -21,6 +22,7 @@ const Index = () => {
         <Features />
         <DashboardPreview />
         <HowItWorks />
+        <CustomerSegments />
         <Benefits />
         <FAQ />
         <CallToAction />
