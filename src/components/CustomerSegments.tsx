@@ -52,8 +52,12 @@ const CustomerSegments = () => {
     }]
   }];
   return <section className="relative py-16" style={{ backgroundColor: '#FBFBFC' }}>
-      {/* Gradient top border */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20"></div>
+      {/* Wavy top border */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden">
+        <svg className="relative block w-full h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="white"></path>
+        </svg>
+      </div>
       <div className="max-container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
