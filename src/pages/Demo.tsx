@@ -22,17 +22,50 @@ const Demo = () => {
 
   const iframeSrc = `https://dash.newmode.ai/proxy/${demoUrl}`;
 
-  useEffect(() => {
-    // Try to set domain, though this may not work due to same-origin policy
+  const handleIframeLoad = () => {
     try {
-      const iframe = document.querySelector('iframe');
-      if (iframe && iframe.contentDocument) {
-        iframe.contentDocument.domain = "newmode.ai";
+      const iframe = document.querySelector('iframe') as HTMLIFrameElement;
+      if (iframe && iframe.contentWindow) {
+        const iframeWindow = iframe.contentWindow as any;
+        const iframeDocument = iframe.contentDocument;
+        
+        if (iframeDocument) {
+          // Set domain if possible
+          try {
+            iframeDocument.domain = "newmode.ai";
+          } catch (error) {
+            console.log("Could not set iframe domain:", error);
+          }
+
+          // Inject the studio script
+          const STUDIO_URL = "https://cdn.newmode.ai/studio.js";
+          
+          iframeWindow.newmode = { ...(iframeWindow.newmode || {}), studio: {playground: true} };
+          
+          const script = iframeDocument.createElement("script");
+          script.src = STUDIO_URL;
+          script.crossOrigin = "anonymous";
+          script.type = "module";
+          
+          script.addEventListener("load", () => {
+            if (iframeWindow.newmode && iframeWindow.newmode.startStudio) {
+              iframeWindow.newmode.startStudio();
+            }
+          });
+          
+          iframeDocument.head.appendChild(script);
+        }
       }
     } catch (error) {
-      // Silently fail if we can't set the domain
-      console.log("Could not set iframe domain:", error);
+      console.log("Could not inject studio script:", error);
     }
+  };
+
+  useEffect(() => {
+    // Clean up on unmount
+    return () => {
+      // Any cleanup if needed
+    };
   }, []);
 
   return (
@@ -41,6 +74,7 @@ const Demo = () => {
         src={iframeSrc}
         className="w-full h-screen border-0"
         title={`Demo for ${demoUrl}`}
+        onLoad={handleIframeLoad}
         sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
       />
     </div>
