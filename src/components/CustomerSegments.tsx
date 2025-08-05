@@ -65,16 +65,25 @@ const CustomerSegments = () => {
 
       {/* Current section with wave separator at top */}
       <section className="relative bg-gray-50 dark:bg-gray-900 pt-20 pb-16">
-        {/* Wave separator */}
+        {/* Curved separator */}
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
           <svg 
-            className="relative block w-full h-20" 
+            className="relative block w-full h-24" 
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 1200 120" 
             preserveAspectRatio="none"
           >
+            {/* 
+              PATH EXPLANATION - THIS IS WHAT CREATES THE CURVE:
+              M0,20    = Start point (left edge, 20 pixels down - SUBTLE LEFT SIDE)
+              Q900,120 = Control point (x=900, y=120 - CONTROLS THE CURVE PEAK)
+              1200,10  = End point (right edge, 10 pixels down - PROMINENT RIGHT SIDE)
+              
+              The curve goes UP because the control point (120) is BELOW both endpoints
+              Left is subtle (20), right is prominent (10 - closer to top)
+            */}
             <path 
-              d="M0,60 Q300,0 600,60 T1200,60 L1200,0 L0,0 Z" 
+              d="M0,20 Q900,120 1200,10 L1200,0 L0,0 Z" 
               className="fill-white dark:fill-gray-950"
             />
           </svg>
