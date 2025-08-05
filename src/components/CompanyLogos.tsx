@@ -40,16 +40,29 @@ const CompanyLogos = () => {
             Thousands of B2B Companies Use Website Personalization
           </h2>
         </div>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60">
-          {companies.map((company, index) => (
-            <div key={index} className="flex items-center justify-center">
-              <img
-                src={company.logo}
-                alt={company.name}
-                className="h-8 md:h-10 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
-          ))}
+        <div className="relative overflow-hidden">
+          <div className="flex animate-scroll">
+            {/* First set of logos */}
+            {companies.map((company, index) => (
+              <div key={index} className="flex items-center justify-center min-w-[200px] mx-8">
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  className="h-8 md:h-10 object-contain filter grayscale opacity-60"
+                />
+              </div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {companies.map((company, index) => (
+              <div key={`duplicate-${index}`} className="flex items-center justify-center min-w-[200px] mx-8">
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  className="h-8 md:h-10 object-contain filter grayscale opacity-60"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

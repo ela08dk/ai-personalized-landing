@@ -114,6 +114,7 @@ export default {
         float: "float 6s ease-in-out infinite",
         "pulse-slow": "pulse-slow 4s ease-in-out infinite",
         "hero-title-fade-in": "fade-in 0.4s ease-out",
+        scroll: "scroll 20s linear infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
