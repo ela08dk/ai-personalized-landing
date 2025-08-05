@@ -33,7 +33,7 @@ const CompanyLogos = () => {
   ];
 
   return (
-    <section className="relative py-16 bg-muted/30">
+    <section className="relative py-16 bg-muted/60">
       {/* Wavy bottom border */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden">
         <svg
