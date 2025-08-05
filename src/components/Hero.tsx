@@ -15,16 +15,10 @@ const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-0 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl md:text-5xl xl:text-[56px] font-bold leading-tight">
-              Personalise your
-              <br />
-              website.
-              <br />
-              <LandingPageEffect />
+              Personalise your website for every target account
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-xl">
-              Our AI personalizes every website visit, creating unique
-              experiences for each traffic source to maximize your conversion
-              rates.
+              Effortlessly create hyper-personalized website experiences for any account, persona, deal-stage or industry. Show different content, messaging, and CTAs to each visitor based on who they are and how they found you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <PlaygroundButton />

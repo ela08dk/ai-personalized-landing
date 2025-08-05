@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
-const benefitsList = ["Increase conversion rates by up to 189%", "Create personalized experiences for every traffic source", "No need for manual A/B testing or copywriting", "Works 24/7 to continuously optimize your pages", "Easy to set up with your existing Google accounts", "No technical skills required to create personalized pages"];
+const benefitsList = ["Increase pipeline quality by up to 189%", "Identify and engage target accounts automatically", "Build personalized experiences in minutes, not weeks", "Track revenue attribution from personalization", "Works with your existing tech stack", "No technical skills required to get started"];
 const Benefits: React.FC = () => {
   return <section id="benefits" className="relative section-padding bg-slate-800">
       {/* Wavy top border */}
@@ -13,19 +13,34 @@ const Benefits: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl mb-6 font-bold text-slate-50">
-              Why We Built <span className="gradient-text">newmode.ai</span>
+              Why Teams Choose <span className="gradient-text">NewMode</span>
             </h2>
-            <p className="text-lg mb-8 text-slate-50">
-              Every visitor to your website is unique. Someone who comes from a
-              Google ad targeting competitor keywords is different from someone
-              who visited from a news article. Creating unique copy for each
-              traffic source and iterating thousands of times would have been
-              impossible.
-            </p>
-            <p className="text-lg mb-8 text-slate-50">
-              AI can work continuously over many days through thousands of small
-              feedback loops until the traffic that converts most is found.
-            </p>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold text-slate-50 mb-2">1:1 and 1:Few Personalization</h3>
+                <p className="text-lg text-slate-50">
+                  Show different experiences to individual accounts, industry segments, or company sizes. Import your target accounts and watch your website adapt to each visitor automatically.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-50 mb-2">Account Intelligence Built-In</h3>
+                <p className="text-lg text-slate-50">
+                  Identify visiting companies in real-time and serve experiences that match their industry, size, and buying stage. No guessing—just relevant messaging every time.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-50 mb-2">Conversational AI Editor</h3>
+                <p className="text-lg text-slate-50">
+                  Build personalized experiences in minutes, not weeks. Just tell our AI what you want: "Make this more enterprise-focused" or "Add competitive advantages for this account."
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-50 mb-2">Revenue Attribution</h3>
+                <p className="text-lg text-slate-50">
+                  Track which personalized experiences drive meetings, opportunities, and deals. Finally, prove your website's impact on pipeline and revenue.
+                </p>
+              </div>
+            </div>
 
             <div className="space-y-4">
               {benefitsList.map((benefit, index) => <div key={index} className="flex items-start gap-3">
