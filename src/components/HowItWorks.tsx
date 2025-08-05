@@ -12,39 +12,39 @@ interface Step {
 const steps: Step[] = [
   {
     number: "01",
-    title: "Install Script",
+    title: "Connect Your Accounts",
     description:
-      "Add one script to your website header. Works with: WordPress, Shopify, Webflow, custom HTML",
+      "Link your Google Analytics and Google Ads accounts to import your traffic and campaign data.",
     image: "integrations.png",
     video: null,
-    id: "how-it-works-install-script",
+    id: "how-it-works-connect-accounts",
   },
   {
     number: "02",
-    title: "Connect Your Data",
+    title: "Import & Analyze Data",
     description:
-      "Import target account lists, LinkedIn Ads, or email segments via CSV",
+      "Our AI analyzes your traffic sources and visitor behavior to identify optimization opportunities.",
     image: null,
     video: "creation-output",
-    id: "how-it-works-connect-data",
+    id: "how-it-works-analyze-data",
   },
   {
     number: "03",
-    title: "Create Experiences",
+    title: "AI Generates Personalized Pages",
     description:
-      "Start by describing what you want in plain English. Our AI helps you create personalized templates that can then be automatically applied to hundreds of accounts at scale.",
+      "Based on the analysis, the AI creates custom landing pages for each traffic source.",
     image: null,
     video: "preview-output",
-    id: "how-it-works-create-experiences",
+    id: "how-it-works-generate-pages",
   },
   {
     number: "04",
-    title: "Activate & Convert",
+    title: "Continuous Optimization",
     description:
-      "Target accounts automatically see personalized experiences that drive them to take action",
+      "The AI runs thousands of A/B tests to refine and improve each landing page over time.",
     image: null,
     video: "fast-forward-output",
-    id: "how-it-works-activate-convert",
+    id: "how-it-works-optimization",
   },
 ];
 
@@ -54,10 +54,11 @@ const HowItWorks: React.FC = () => {
       <div className="max-container">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            How It Works
+            How <span className="gradient-text">newmode.ai Works</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Get started with personalized experiences in minutes. Our platform makes it easy to create, deploy, and measure the impact of account-specific content.
+            Our AI works tirelessly to create personalized experiences that
+            convert more visitors into customers.
           </p>
         </div>
 

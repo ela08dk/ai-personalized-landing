@@ -8,7 +8,6 @@ import InteractiveDemo from "@/components/InteractiveDemo";
 import HowItWorks from "@/components/HowItWorks";
 import CustomerSegments from "@/components/CustomerSegments";
 import Benefits from "@/components/Benefits";
-import Problem from "@/components/Problem";
 import CallToAction from "@/components/CallToAction";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -20,10 +19,10 @@ const Index = () => {
       <main className="flex-grow">
         <Hero />
         <CompanyLogos />
-        <Problem />
-        <Benefits />
+        <Features />
         <HowItWorks />
         <CustomerSegments />
+        <Benefits />
         <InteractiveDemo />
         <FAQ />
         <CallToAction />
