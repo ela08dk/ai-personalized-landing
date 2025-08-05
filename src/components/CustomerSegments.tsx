@@ -52,10 +52,10 @@ const CustomerSegments = () => {
     }]
   }];
   return <section className="relative py-16" style={{ backgroundColor: '#FBFBFC' }}>
-      {/* Diagonal top border */}
+      {/* Curved top border */}
       <div className="absolute top-0 left-0 w-full overflow-hidden">
         <svg className="relative block w-full h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <polygon fill="white" points="0,0 0,120 1200,0"></polygon>
+          <path d="M0,0 Q600,60 1200,0 L1200,120 L0,120 Z" fill="white"></path>
         </svg>
       </div>
       <div className="max-container">
