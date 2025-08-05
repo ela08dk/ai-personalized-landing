@@ -12,7 +12,7 @@ const benefitsList = [
 
 const Benefits: React.FC = () => {
   return (
-    <section id="benefits" className="relative section-padding gradient-bg">
+    <section id="benefits" className="relative section-padding bg-muted/40">
       {/* Wavy top border */}
       <div className="absolute top-0 left-0 w-full overflow-hidden">
         <svg className="relative block w-full h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
