@@ -51,7 +51,7 @@ const CustomerSegments = () => {
       value: "+26%"
     }]
   }];
-  return <section className="relative py-16" style={{ backgroundColor: '#f8f9fa' }}>
+  return <section className="relative py-16 bg-muted/50">
       {/* Curved top border */}
       <div className="absolute top-0 left-0 w-full overflow-hidden">
         <svg className="relative block w-full h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
