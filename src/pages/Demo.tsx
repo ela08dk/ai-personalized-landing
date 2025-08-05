@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams, Navigate } from "react-router-dom";
 
 const Demo = () => {
   const { demoUrl } = useParams<{ demoUrl: string }>();
-  const [htmlContent, setHtmlContent] = useState<string>("");
-  const [loading, setLoading] = useState(true);
 
   const allowedDemoUrls = [
     "brex.com",
@@ -22,21 +20,7 @@ const Demo = () => {
     return <Navigate to="/404" replace />;
   }
 
-  useEffect(() => {
-    const fetchContent = async () => {
-      try {
-        const response = await fetch(`https://dash.newmode.ai/proxy/${demoUrl}`);
-        const html = await response.text();
-        setHtmlContent(html);
-      } catch (error) {
-        console.error("Failed to fetch content:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchContent();
-  }, [demoUrl]);
+  const iframeSrc = `https://dash.newmode.ai/proxy/${demoUrl}`;
 
   const handleIframeLoad = () => {
     try {
@@ -84,18 +68,10 @@ const Demo = () => {
     };
   }, []);
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div>Loading...</div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen">
       <iframe
-        srcDoc={htmlContent}
+        src={iframeSrc}
         className="w-full h-screen border-0"
         title={`Demo for ${demoUrl}`}
         onLoad={handleIframeLoad}
