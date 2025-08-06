@@ -6,11 +6,9 @@ import LandingPageEffect from "./LandingPageEffect";
 import { useDashLink } from "../hooks/use-dash-link";
 import { PlaygroundButton } from "./cta/PlaygroundButton";
 import { GetStartedButton } from "./cta/GetStartedButton";
-
 const Hero: React.FC = () => {
   const dashLink = useDashLink();
-  return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white to-craftera-blue/5 section-padding">
+  return <section className="relative overflow-hidden bg-gradient-to-b from-white to-craftera-blue/5 section-padding">
       <div className="max-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-0 items-center">
           <div className="space-y-8">
@@ -21,11 +19,7 @@ const Hero: React.FC = () => {
               <br />
               <LandingPageEffect />
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 max-w-xl">
-              Our AI personalizes every website visit, creating unique
-              experiences for each traffic source to maximize your conversion
-              rates.
-            </p>
+            <p className="text-lg md:text-xl text-gray-600 max-w-xl">AI that personalizes your website for each visitor, showing the right content, messaging, and CTAs based on who they are.</p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <PlaygroundButton />
               <GetStartedButton />
@@ -56,15 +50,9 @@ const Hero: React.FC = () => {
               {/* AI personalized page */}
               <div className="bg-white rounded-xl transform transition-all duration-500 ">
                 <div className="overflow-hidden rounded-lg aspect-video">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    style={{ transform: "scale(1.08)" }}
-                    poster="/first-frame.webp"
-                    className="aspect-video"
-                  >
+                  <video autoPlay loop muted playsInline style={{
+                  transform: "scale(1.08)"
+                }} poster="/first-frame.webp" className="aspect-video">
                     <source src="/output.mp4" type="video/mp4"></source>
                     <source src="/output.webm" type="video/webm"></source>
                     Your browser does not support the video tag.
@@ -87,8 +75,6 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
