@@ -38,8 +38,8 @@ const Features: React.FC = () => {
       <div className="max-container">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Personalize Every Visit With{" "}
-            <span className="gradient-text">AI</span>
+            Stop showing generic websites to your{" "}
+            <span className="gradient-text">best accounts</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Our AI automatically creates and optimizes unique landing pages for
