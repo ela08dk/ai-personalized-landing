@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const LandingPageEffect = () => {
   const [initial, setInitial] = useState(true);
-  const words = ["ad.", "campaign.", "referral.", "visitor."];
+  const words = ["account.", "campaign.", "visitor.", "ad."];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   useEffect(() => {
