@@ -1,20 +1,29 @@
 import React from "react";
-import { ArrowRight, TrendingDown, Users, Zap } from "lucide-react";
-const featureData = [{
-  icon: <TrendingDown className="w-12 h-12 text-red-400" />,
-  title: "Lost Enterprise Deals",
-  description: "Enterprise prospects expect sophisticated, tailored experiences. Generic websites signal you're not ready for their scale.",
-  href: "#problem"
+import { ArrowRight, User } from "lucide-react";
+const caseStudyData = [{
+  tag: "ABM",
+  metric: "+$2.1M in pipeline",
+  title: "How TechCorp's AI-Powered Personalization Drove 340% Pipeline Growth",
+  customer: "Sarah Chen",
+  role: "VP of Marketing Operations",
+  company: "TechCorp",
+  href: "/demo/techcorp.com"
 }, {
-  icon: <Users className="w-12 h-12 text-purple-300" />,
-  title: "One-Size-Fits-None Messaging",
-  description: "Your Fortune 500 prospect has different pain points than a startup. Yet they see identical value propositions and case studies.",
-  href: "#problem"
+  tag: "ABM", 
+  metric: "+180% meeting rate",
+  title: "How DataFlow Achieved 180% Meeting Rate Increase with Smart Website Personalization",
+  customer: "Marcus Rodriguez",
+  role: "Director of Demand Generation",
+  company: "DataFlow",
+  href: "/demo/dataflow.com"
 }, {
-  icon: <Zap className="w-12 h-12 text-orange-300" />,
-  title: "Competitive Disadvantage",
-  description: "While you show generic content, competitors are delivering personalized experiences that speak directly to each account's needs.",
-  href: "#problem"
+  tag: "ABM",
+  metric: "+350% engagement",
+  title: "Scaling Enterprise ABM: How CloudTech Boosted Engagement 350% in 45 Days",
+  customer: "Jennifer Kim",
+  role: "Senior ABM Manager", 
+  company: "CloudTech",
+  href: "/demo/cloudtech.com"
 }];
 const Features: React.FC = () => {
   return <section id="features" className="section-padding bg-white">
@@ -27,14 +36,40 @@ const Features: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {featureData.map((feature, index) => <div key={index} className="p-6 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all">
-              <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600 mb-4">{feature.description}</p>
-              <a href={feature.href} className="inline-flex items-center text-craftera-dark font-medium">
-                Learn more <ArrowRight className="ml-2 w-4 h-4" />
-              </a>
-            </div>)}
+          {caseStudyData.map((caseStudy, index) => 
+            <a 
+              key={index} 
+              href={caseStudy.href}
+              className="group p-6 rounded-xl bg-gradient-to-br from-purple-600 to-purple-800 text-white hover:from-purple-700 hover:to-purple-900 transition-all transform hover:-translate-y-1 hover:shadow-xl cursor-pointer"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
+                  {caseStudy.tag}
+                </span>
+                <span className="text-purple-200 text-sm font-semibold">
+                  {caseStudy.metric}
+                </span>
+              </div>
+              
+              <h3 className="text-xl font-bold mb-6 leading-tight">
+                {caseStudy.title}
+              </h3>
+              
+              <div className="flex items-center gap-3 mt-auto">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                  <User className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="font-semibold text-sm">{caseStudy.customer}</div>
+                  <div className="text-purple-200 text-xs">{caseStudy.role}</div>
+                </div>
+              </div>
+              
+              <div className="mt-4 inline-flex items-center text-purple-200 group-hover:text-white transition-colors">
+                View Demo <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </a>
+          )}
         </div>
       </div>
     </section>;
