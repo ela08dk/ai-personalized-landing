@@ -3,7 +3,7 @@ import { ArrowRight, User } from "lucide-react";
 const caseStudyData = [{
   tag: "ABM",
   metric: "+$2.1M in pipeline",
-  title: "How Brex's AI-Powered Personalization Drove 340% Pipeline Growth",
+  title: "How Brex Could Drive 340% Pipeline Growth with AI Personalization",
   company: "Brex",
   logo: "/lovable-uploads/bd1d1039-eb4d-4b70-aeae-8ccff7695420.png",
   href: "/demo/brex.com",
