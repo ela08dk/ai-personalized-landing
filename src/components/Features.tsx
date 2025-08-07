@@ -18,7 +18,7 @@ const caseStudyData = [{
   colorScheme: "bg-indigo-500/80 hover:bg-indigo-600/90"
 }, {
   tag: "ABM",
-  metric: "+35%",
+  metric: "+35% conversions",
   title: "How Notion Can Boost Website Conversions 35% in 45 Days",
   company: "Notion",
   logo: "/lovable-uploads/2dd60b04-32ef-4eb6-b2b1-a8c1d85e2aff.png",
