@@ -64,13 +64,13 @@ export default {
         },
         // Craftera custom colors
         craftera: {
-          cream: "#FEF2C8",
-          purple: "#C7D2FF",
-          dark: "#171717",
-          blue: "#DCEAFF",
-          gray: "#F5F5F5",
-          green: "#D0FAE5",
-          pink: "#FDE7F4",
+          cream: "hsl(50 88% 89%)",
+          purple: "hsl(230 100% 89%)",
+          dark: "hsl(0 0% 9%)",
+          blue: "hsl(214 100% 92%)",
+          gray: "hsl(0 0% 96%)",
+          green: "hsl(142 76% 91%)",
+          pink: "hsl(321 69% 95%)",
         },
       },
       borderRadius: {
