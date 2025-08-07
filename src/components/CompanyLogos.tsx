@@ -22,7 +22,7 @@ const CompanyLogos = () => {
     name: "Redis",
     logo: "/lovable-uploads/348b90a0-c12b-49df-9fbb-3470de4c0e89.png"
   }];
-  return <section className="relative py-16 bg-muted">
+  return <section className="relative py-16 bg-muted/60">
       {/* Wavy bottom border */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden">
         <svg className="relative block w-full h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -39,11 +39,11 @@ const CompanyLogos = () => {
           <div className="flex animate-scroll">
             {/* First set of logos */}
             {companies.map((company, index) => <div key={index} className="flex items-center justify-center min-w-[200px] mx-8">
-                <img src={company.logo} alt={company.name} className="h-8 md:h-10 object-contain filter grayscale opacity-80" />
+                <img src={company.logo} alt={company.name} className="h-8 md:h-10 object-contain filter grayscale opacity-60" />
               </div>)}
             {/* Duplicate set for seamless loop */}
             {companies.map((company, index) => <div key={`duplicate-${index}`} className="flex items-center justify-center min-w-[200px] mx-8">
-                <img src={company.logo} alt={company.name} className="h-8 md:h-10 object-contain filter grayscale opacity-80" />
+                <img src={company.logo} alt={company.name} className="h-8 md:h-10 object-contain filter grayscale opacity-60" />
               </div>)}
           </div>
         </div>
