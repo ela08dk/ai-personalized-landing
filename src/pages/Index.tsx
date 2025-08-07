@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CompanyLogos from "@/components/CompanyLogos";
 import Features from "@/components/Features";
-import InteractiveDemo from "@/components/InteractiveDemo";
+
 import HowItWorks from "@/components/HowItWorks";
 import CustomerSegments from "@/components/CustomerSegments";
 import Benefits from "@/components/Benefits";
@@ -23,7 +23,7 @@ const Index = () => {
         <HowItWorks />
         <CustomerSegments />
         <Benefits />
-        <InteractiveDemo />
+        
         <FAQ />
         <CallToAction />
       </main>
