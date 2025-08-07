@@ -12,39 +12,39 @@ interface Step {
 const steps: Step[] = [
   {
     number: "01",
-    title: "Connect Your Accounts",
+    title: "Install Script",
     description:
-      "Link your Google Analytics and Google Ads accounts to import your traffic and campaign data.",
-    image: "integrations.png",
+      "Add one script to your website header. Works with: WordPress, Shopify, Webflow, custom HTML",
+    image: "install-script-step.png",
     video: null,
-    id: "how-it-works-connect-accounts",
+    id: "how-it-works-install-script",
   },
   {
     number: "02",
-    title: "Import & Analyze Data",
+    title: "Connect Your Data",
     description:
-      "Our AI analyzes your traffic sources and visitor behavior to identify optimization opportunities.",
-    image: null,
-    video: "creation-output",
-    id: "how-it-works-analyze-data",
+      "Import target account lists, LinkedIn Ads, or keywords via CSV",
+    image: "connect-data-step.png",
+    video: null,
+    id: "how-it-works-connect-data",
   },
   {
     number: "03",
-    title: "AI Generates Personalized Pages",
+    title: "Create Experiences",
     description:
-      "Based on the analysis, the AI creates custom landing pages for each traffic source.",
-    image: null,
-    video: "preview-output",
-    id: "how-it-works-generate-pages",
+      "Describe what you want in plain English. Our AI transforms your website for each account instantly",
+    image: "create-experiences-step.png",
+    video: null,
+    id: "how-it-works-create-experiences",
   },
   {
     number: "04",
-    title: "Continuous Optimization",
+    title: "Activate & Convert",
     description:
-      "The AI runs thousands of A/B tests to refine and improve each landing page over time.",
+      "Target accounts automatically see personalized experiences that drive them to take action",
     image: null,
-    video: "fast-forward-output",
-    id: "how-it-works-optimization",
+    video: "preview-output",
+    id: "how-it-works-activate-convert",
   },
 ];
 
