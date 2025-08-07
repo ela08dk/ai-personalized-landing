@@ -9,7 +9,7 @@ const caseStudyData = [{
   company: "TechCorp",
   href: "/demo/techcorp.com"
 }, {
-  tag: "ABM", 
+  tag: "ABM",
   metric: "+180% meeting rate",
   title: "How DataFlow Achieved 180% Meeting Rate Increase with Smart Website Personalization",
   customer: "Marcus Rodriguez",
@@ -21,7 +21,7 @@ const caseStudyData = [{
   metric: "+350% engagement",
   title: "Scaling Enterprise ABM: How CloudTech Boosted Engagement 350% in 45 Days",
   customer: "Jennifer Kim",
-  role: "Senior ABM Manager", 
+  role: "Senior ABM Manager",
   company: "CloudTech",
   href: "/demo/cloudtech.com"
 }];
@@ -36,12 +36,7 @@ const Features: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {caseStudyData.map((caseStudy, index) => 
-            <a 
-              key={index} 
-              href={caseStudy.href}
-              className="group p-6 rounded-xl bg-gradient-to-br from-purple-600 to-purple-800 text-white hover:from-purple-700 hover:to-purple-900 transition-all transform hover:-translate-y-1 hover:shadow-xl cursor-pointer"
-            >
+          {caseStudyData.map((caseStudy, index) => <a key={index} href={caseStudy.href} className="group p-6 rounded-xl bg-gradient-to-br from-purple-600 to-purple-800 text-white hover:from-purple-700 hover:to-purple-900 transition-all transform hover:-translate-y-1 hover:shadow-xl cursor-pointer">
               <div className="flex items-center justify-between mb-4">
                 <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
                   {caseStudy.tag}
@@ -68,8 +63,7 @@ const Features: React.FC = () => {
               <div className="mt-4 inline-flex items-center text-purple-200 group-hover:text-white transition-colors">
                 View Demo <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
-            </a>
-          )}
+            </a>)}
         </div>
       </div>
     </section>;
