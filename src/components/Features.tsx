@@ -7,7 +7,7 @@ const caseStudyData = [{
   company: "Brex",
   logo: "/lovable-uploads/bd1d1039-eb4d-4b70-aeae-8ccff7695420.png",
   href: "/demo/brex.com",
-  colorScheme: "from-blue-400/80 to-indigo-500/80 hover:from-blue-500/90 hover:to-indigo-600/90"
+  colorScheme: "from-purple-400/70 to-purple-600/80 hover:from-purple-500/80 hover:to-purple-700/90"
 }, {
   tag: "ABM",
   metric: "+180% meeting rate",
@@ -15,7 +15,7 @@ const caseStudyData = [{
   company: "HubSpot",
   logo: "/lovable-uploads/1684ee10-457e-4f40-99d7-664c00bbc99a.png",
   href: "/demo/hubspot.com",
-  colorScheme: "from-orange-400/80 to-red-500/80 hover:from-orange-500/90 hover:to-red-600/90"
+  colorScheme: "from-indigo-400/70 to-indigo-600/80 hover:from-indigo-500/80 hover:to-indigo-700/90"
 }, {
   tag: "ABM",
   metric: "+350% engagement",
@@ -23,7 +23,7 @@ const caseStudyData = [{
   company: "Notion",
   logo: "/lovable-uploads/404bdab0-873e-457b-b7f4-538ca61162c8.png",
   href: "/demo/notion.com/enterprise",
-  colorScheme: "from-slate-400/80 to-gray-600/80 hover:from-slate-500/90 hover:to-gray-700/90"
+  colorScheme: "from-purple-400/70 to-purple-600/80 hover:from-purple-500/80 hover:to-purple-700/90"
 }];
 const Features: React.FC = () => {
   return <section id="features" className="section-padding bg-white">
@@ -51,7 +51,7 @@ const Features: React.FC = () => {
               </h3>
               
               <div className="flex items-center gap-3 mt-auto">
-                <div className="w-12 h-12 bg-white/90 rounded-lg flex items-center justify-center p-2">
+                <div className="w-12 h-12 flex items-center justify-center">
                   <img 
                     src={caseStudy.logo} 
                     alt={`${caseStudy.company} logo`}
