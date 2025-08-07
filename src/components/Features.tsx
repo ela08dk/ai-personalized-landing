@@ -7,15 +7,15 @@ const caseStudyData = [{
   company: "Brex",
   logo: "/lovable-uploads/bd1d1039-eb4d-4b70-aeae-8ccff7695420.png",
   href: "/demo/brex.com",
-  colorScheme: "from-purple-400/70 to-purple-600/80 hover:from-purple-500/80 hover:to-purple-700/90"
+  colorScheme: "bg-purple-500/80 hover:bg-purple-600/90"
 }, {
   tag: "ABM",
   metric: "+180% meeting rate",
   title: "How HubSpot Achieved 180% Meeting Rate Increase with Smart Website Personalization",
   company: "HubSpot",
-  logo: "/lovable-uploads/1684ee10-457e-4f40-99d7-664c00bbc99a.png",
+  logo: "/lovable-uploads/db6b2199-96ac-46c7-b11e-174cd1e2d792.png",
   href: "/demo/hubspot.com",
-  colorScheme: "from-indigo-400/70 to-indigo-600/80 hover:from-indigo-500/80 hover:to-indigo-700/90"
+  colorScheme: "bg-indigo-500/80 hover:bg-indigo-600/90"
 }, {
   tag: "ABM",
   metric: "+350% engagement",
@@ -23,7 +23,7 @@ const caseStudyData = [{
   company: "Notion",
   logo: "/lovable-uploads/404bdab0-873e-457b-b7f4-538ca61162c8.png",
   href: "/demo/notion.com/enterprise",
-  colorScheme: "from-purple-400/70 to-purple-600/80 hover:from-purple-500/80 hover:to-purple-700/90"
+  colorScheme: "bg-purple-500/80 hover:bg-purple-600/90"
 }];
 const Features: React.FC = () => {
   return <section id="features" className="section-padding bg-white">
@@ -36,7 +36,7 @@ const Features: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {caseStudyData.map((caseStudy, index) => <a key={index} href={caseStudy.href} className={`group p-6 rounded-xl bg-gradient-to-br ${caseStudy.colorScheme} text-white transition-all transform hover:-translate-y-1 hover:shadow-xl cursor-pointer`}>
+          {caseStudyData.map((caseStudy, index) => <a key={index} href={caseStudy.href} className={`group p-6 rounded-xl ${caseStudy.colorScheme} text-white transition-all transform hover:-translate-y-1 hover:shadow-xl cursor-pointer`}>
               <div className="flex items-center justify-between mb-4">
                 <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
                   {caseStudy.tag}
