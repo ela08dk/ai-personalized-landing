@@ -11,7 +11,7 @@ const caseStudyData = [{
 }, {
   tag: "ABM",
   metric: "+180% meeting rate",
-  title: "How HubSpot Achieved 180% Meeting Rate Increase with Smart Website Personalization",
+  title: "How HubSpot can Achieve 180% Meeting Rate Increase with Smart Website Personalization",
   company: "HubSpot",
   logo: "/lovable-uploads/db6b2199-96ac-46c7-b11e-174cd1e2d792.png",
   href: "/demo/hubspot.com",
@@ -19,7 +19,7 @@ const caseStudyData = [{
 }, {
   tag: "ABM",
   metric: "+350% engagement",
-  title: "Scaling Enterprise ABM: How Notion Boosted Engagement 350% in 45 Days",
+  title: "How Notion Can Boost Website Conversions 35% in 45 Days",
   company: "Notion",
   logo: "/lovable-uploads/2dd60b04-32ef-4eb6-b2b1-a8c1d85e2aff.png",
   href: "/demo/notion.com/enterprise",
@@ -60,7 +60,7 @@ const Features: React.FC = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-sm">{caseStudy.company}</div>
-                  <div className="text-white/70 text-xs">Enterprise Customer</div>
+                  
                 </div>
               </div>
               
