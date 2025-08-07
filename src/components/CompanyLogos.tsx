@@ -22,7 +22,7 @@ const CompanyLogos = () => {
     name: "Redis",
     logo: "/lovable-uploads/348b90a0-c12b-49df-9fbb-3470de4c0e89.png"
   }];
-  return <section className="relative py-16 bg-muted/60">
+  return <section className="relative py-16 bg-gray-100">
       {/* Wavy bottom border */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden">
         <svg className="relative block w-full h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
