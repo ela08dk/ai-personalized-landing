@@ -21,7 +21,7 @@ const caseStudyData = [{
   metric: "+350% engagement",
   title: "Scaling Enterprise ABM: How Notion Boosted Engagement 350% in 45 Days",
   company: "Notion",
-  logo: "/lovable-uploads/404bdab0-873e-457b-b7f4-538ca61162c8.png",
+  logo: "/lovable-uploads/2dd60b04-32ef-4eb6-b2b1-a8c1d85e2aff.png",
   href: "/demo/notion.com/enterprise",
   colorScheme: "bg-purple-500/80 hover:bg-purple-600/90"
 }];
