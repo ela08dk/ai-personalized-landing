@@ -82,7 +82,7 @@ const CustomerSegments = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Proven Results Across <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Teams</span>
+            Proven Results Across <span className="bg-gradient-to-r from-purple-400/80 to-fuchsia-300 bg-clip-text text-transparent">Teams</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             See how companies like yours are achieving remarkable growth with AI-powered personalization
@@ -124,7 +124,7 @@ const CustomerSegments = () => {
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-8 shadow-sm">
-                  <h4 className="text-xl font-semibold mb-6 text-center">Key Metrics</h4>
+                  <h4 className="text-xl font-semibold mb-6 text-center"><span className="bg-gradient-to-r from-purple-400/80 to-fuchsia-300 bg-clip-text text-transparent">Key Metrics</span></h4>
                   <div className="space-y-6">
                     {segment.metrics.map((metric, index) => (
                       <div key={index} className="flex justify-between items-center">
