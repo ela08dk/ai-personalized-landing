@@ -124,12 +124,12 @@ const CustomerSegments = () => {
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-8 shadow-sm">
-                  <h4 className="text-xl font-semibold mb-6 text-center"><span className="bg-gradient-to-r from-purple-400/80 to-fuchsia-300 bg-clip-text text-transparent">Key Metrics</span></h4>
+                  <h4 className="text-xl font-semibold mb-6 text-center">Key Metrics</h4>
                   <div className="space-y-6">
                     {segment.metrics.map((metric, index) => (
                       <div key={index} className="flex justify-between items-center">
                         <span className="text-gray-600 dark:text-gray-400">{metric.label}</span>
-                        <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">{metric.value}</span>
+                        <span className="text-2xl font-bold bg-gradient-to-r from-purple-400/80 to-fuchsia-300 bg-clip-text text-transparent">{metric.value}</span>
                       </div>
                     ))}
                   </div>
