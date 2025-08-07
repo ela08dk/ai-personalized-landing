@@ -3,27 +3,27 @@ import { ArrowRight, User } from "lucide-react";
 const caseStudyData = [{
   tag: "ABM",
   metric: "+$2.1M in pipeline",
-  title: "How TechCorp's AI-Powered Personalization Drove 340% Pipeline Growth",
-  customer: "Sarah Chen",
-  role: "VP of Marketing Operations",
-  company: "TechCorp",
-  href: "/demo/techcorp.com"
+  title: "How Brex's AI-Powered Personalization Drove 340% Pipeline Growth",
+  company: "Brex",
+  logo: "/lovable-uploads/bd1d1039-eb4d-4b70-aeae-8ccff7695420.png",
+  href: "/demo/brex.com",
+  colorScheme: "from-blue-400/80 to-indigo-500/80 hover:from-blue-500/90 hover:to-indigo-600/90"
 }, {
   tag: "ABM",
   metric: "+180% meeting rate",
-  title: "How DataFlow Achieved 180% Meeting Rate Increase with Smart Website Personalization",
-  customer: "Marcus Rodriguez",
-  role: "Director of Demand Generation",
-  company: "DataFlow",
-  href: "/demo/dataflow.com"
+  title: "How HubSpot Achieved 180% Meeting Rate Increase with Smart Website Personalization",
+  company: "HubSpot",
+  logo: "/lovable-uploads/1684ee10-457e-4f40-99d7-664c00bbc99a.png",
+  href: "/demo/hubspot.com",
+  colorScheme: "from-orange-400/80 to-red-500/80 hover:from-orange-500/90 hover:to-red-600/90"
 }, {
   tag: "ABM",
   metric: "+350% engagement",
-  title: "Scaling Enterprise ABM: How CloudTech Boosted Engagement 350% in 45 Days",
-  customer: "Jennifer Kim",
-  role: "Senior ABM Manager",
-  company: "CloudTech",
-  href: "/demo/cloudtech.com"
+  title: "Scaling Enterprise ABM: How Notion Boosted Engagement 350% in 45 Days",
+  company: "Notion",
+  logo: "/lovable-uploads/404bdab0-873e-457b-b7f4-538ca61162c8.png",
+  href: "/demo/notion.com/enterprise",
+  colorScheme: "from-slate-400/80 to-gray-600/80 hover:from-slate-500/90 hover:to-gray-700/90"
 }];
 const Features: React.FC = () => {
   return <section id="features" className="section-padding bg-white">
@@ -36,12 +36,12 @@ const Features: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {caseStudyData.map((caseStudy, index) => <a key={index} href={caseStudy.href} className="group p-6 rounded-xl bg-gradient-to-br from-purple-600 to-purple-800 text-white hover:from-purple-700 hover:to-purple-900 transition-all transform hover:-translate-y-1 hover:shadow-xl cursor-pointer">
+          {caseStudyData.map((caseStudy, index) => <a key={index} href={caseStudy.href} className={`group p-6 rounded-xl bg-gradient-to-br ${caseStudy.colorScheme} text-white transition-all transform hover:-translate-y-1 hover:shadow-xl cursor-pointer`}>
               <div className="flex items-center justify-between mb-4">
                 <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
                   {caseStudy.tag}
                 </span>
-                <span className="text-purple-200 text-sm font-semibold">
+                <span className="text-white/80 text-sm font-semibold">
                   {caseStudy.metric}
                 </span>
               </div>
@@ -51,16 +51,20 @@ const Features: React.FC = () => {
               </h3>
               
               <div className="flex items-center gap-3 mt-auto">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <User className="w-5 h-5" />
+                <div className="w-12 h-12 bg-white/90 rounded-lg flex items-center justify-center p-2">
+                  <img 
+                    src={caseStudy.logo} 
+                    alt={`${caseStudy.company} logo`}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div>
-                  <div className="font-semibold text-sm">{caseStudy.customer}</div>
-                  <div className="text-purple-200 text-xs">{caseStudy.role}</div>
+                  <div className="font-semibold text-sm">{caseStudy.company}</div>
+                  <div className="text-white/70 text-xs">Enterprise Customer</div>
                 </div>
               </div>
               
-              <div className="mt-4 inline-flex items-center text-purple-200 group-hover:text-white transition-colors">
+              <div className="mt-4 inline-flex items-center text-white/80 group-hover:text-white transition-colors">
                 View Demo <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </a>)}
