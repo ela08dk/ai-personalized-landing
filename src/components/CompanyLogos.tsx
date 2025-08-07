@@ -39,11 +39,11 @@ const CompanyLogos = () => {
           <div className="flex animate-scroll">
             {/* First set of logos */}
             {companies.map((company, index) => <div key={index} className="flex items-center justify-center min-w-[200px] mx-8">
-                <img src={company.logo} alt={company.name} className="h-8 md:h-10 object-contain filter grayscale opacity-60" />
+                <img src={company.logo} alt={company.name} className="h-8 md:h-10 object-contain filter grayscale opacity-80" />
               </div>)}
             {/* Duplicate set for seamless loop */}
             {companies.map((company, index) => <div key={`duplicate-${index}`} className="flex items-center justify-center min-w-[200px] mx-8">
-                <img src={company.logo} alt={company.name} className="h-8 md:h-10 object-contain filter grayscale opacity-60" />
+                <img src={company.logo} alt={company.name} className="h-8 md:h-10 object-contain filter grayscale opacity-80" />
               </div>)}
           </div>
         </div>
